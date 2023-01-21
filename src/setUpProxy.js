@@ -3,7 +3,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 module.exports = function (app) {
   app.use(
     createProxyMiddleware('/api', {
-      target: 'https://jsonplaceholder.typicode.com',
+      target: 'http://localhost:8080',
       changeOrigin: true,
     }),
   );
