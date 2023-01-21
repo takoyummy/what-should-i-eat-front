@@ -1,0 +1,8 @@
+{
+    "singleQuote": true, // 싱글 쿼테이션 사용 여부
+    "semi": true,
+    "useTabs": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "printWidth": 80
+}
