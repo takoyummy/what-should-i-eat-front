@@ -22,7 +22,7 @@
 - 데이터베이스: MySQL
 - 협업도구: Git, Notion, Slack, Figma
 
-### Related Project
+### :octocat: Related Project
 
 ---
 
