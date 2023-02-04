@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="pageViewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahnlab Transaction Security Center</title>
+  <link rel="stylesheet" href="./src/dist/css/style.css" />
+</head>
+<body>
+<header class="header">
+  <h1 class="logo">
+    <a href="#"><img src="src/images/logo.png" alt="Ahnlab Transaction Security Center" /></a>
+  </h1>
+  <nav class="gnb">
+    <ul>
+      <li class="dashboard"><a href="#">대시보드</a></li>
+      <li class="detection"><a href="#">탐지</a></li>
+      <li class="policy"><a href="#">정책</a></li>
+      <li class="statistics"><a href="#">통계</a></li>
+      <li class="report"><a href="#">보고서</a></li>
+      <li class="settings on"><a href="#">설정</a></li>
+    </ul> 
+  </nav>
+  <nav class="util">
+    <ul>
+      <li class="account"><a class="ico icoAccount" href="#">계정</a></li>
+      <li class="download"><a class="ico icoDownload" href="#">다운로드</a></li>
+      <li class="help"><a class="ico icoHelp" href="#">도움</a></li>
+    </ul> 
+  </nav>
+</header>
+<div class="container">
+  <nav class="breadcrumb">
+    <ul>
+      <li><a href="#">설정</a></li>
+      <li><a href="#">관리자 설정</a></li>
+      <li class="on"><a href="#">관리자 리스트</a></li>
+    </ul>
+  </nav>
+  <nav class="snb">
+    <ul class="mainMenu">
+      <li>
+        <a href="#">서비스</a>
+        <div class="subMenu">
+          <ul>
+            <li><a href="#">서비스 관리</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">관리자 설정</a>
+        <div class="subMenu">
+          <ul>
+            <li class="on"><a href="#">관리자 리스트</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <a href="#">시스템</a>
+        <div class="subMenu">
+          <ul>
+            <li><a href="#">로그인 세션 관리</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <section class="section">
+    <h2 class="blind">관리자 리스트</h2>
+    <div class="searchWrap">
+      <form name="search">
+        <input class="textBox" type="text" placeholder="관리자 이름/ 아이디 검색"/>
+        <button class="ico icoSearch">검색하기</button>
+      </form>
+    </div>
+    <div class="adminSet">
+      <ul class="btnWrap">
+        <li class="register"><button>관리자 등록</button></li>
+        <li class="delete"><button>삭제</button></li>
+      </ul>
+      <ul class="selectList">
+        <li>
+          고객사 명 - 
+          <span class="count">N</span>개 선택
+          <button class="ico icoClose">닫기</button>
+        </li>
+        <li>
+          권한 - 
+          <span class="count">N</span>개 선택
+          <button class="ico icoClose">닫기</button>
+        </li>
+      </ul>
+      <p class="countWrap">
+        전체 : 
+        <span class="count">N</span>개
+      </p>
+    </div>
+    <table class="tList">
+      <caption class="blind">관리자 리스트</caption>
+      <colgroup>
+        <col style="width:4.171%"/>
+        <col style="width:4.171%"/>
+        <col style="width:9.4%"/>
+        <col style="width:9.5%"/>
+        <col style="width:13.31%"/>
+        <col style="width:9.88%"/>
+        <col style="width:12.49%"/>
+        <col style="width:11.92%"/>
+        <col style="width:12%"/>
+        <col style="width:17%"/>
+      <!-- 합이 1215여서 각 col에 1px씩 추가함
+        <col style="width:51px">
+        <col style="width:51px">
+        <col style="width:113px">
+        <col style="width:110px">
+        <col style="width:163px">
+        <col style="width:121px">
+        <col style="width:153px">
+        <col style="width:146px">
+        <col style="width:147px">
+        <col style="width:170px">
+      -->
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">
+            <input type="checkbox" name="checkbox" id="chkAll" class="tListchk" />
+            <label for="chkAll"></label>
+          </th>
+          <th scope="col"><p class="ico icoDelete"></p></th>
+          <th class="tSelect filter" scope="col">
+            <button class="tSelectBtn">고객사 명</button>
+            <button class="ico icoFilter">필터 설정</button>
+          </th>
+          <th class="tSelect" scope="col"><button class="tSelectBtn">관리자 이름</button></th>
+          <th class="tSelect" scope="col"><button class="tSelectBtn">아이디(이메일)</button></th>
+          <th class="tSelect" scope="col"><button class="tSelectBtn">관리 서비스</button></th>
+          <th class="tSelect filter" scope="col">
+            <button class="tSelectBtn">권한</button>
+            <button class="ico icoFilter">필터 설정</button>
+          </th>
+          <th class="tSelect" scope="col"><button class="tSelectBtn">최근 권한 수정 날짜</button></th>
+          <th class="tSelect" scope="col"><button class="tSelectBtn">최근 로그인 일시</button></th>
+          <th class="tSelect" scope="col"><button class="tSelectBtn">임시 비밀번호 재발급</button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="user">
+          <th scope="col">
+            <input type="checkbox" name="checkbox" id="chk01" class="tListchk" />
+            <label for="chk01">선택하기</label>
+          </th>
+          <td><p class="ico icoDelete"></p></td>
+          <td class="customer">고객사 명</td>
+          <td>어드민</td>
+          <td class="email"><p class="textLimit">test@email.com</p></td>
+          <td>-</td>
+          <td>어드민 관리자</td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td class="tListBtn"><button>재발급</button></td>
+        </tr>
+        <tr class="others">
+          <th scope="col">
+            <input type="checkbox" name="checkbox" id="chk02" class="tListchk" />
+            <label for="chk02">선택하기</label>
+          </th>
+          <td><p class="ico icoDeleteRed"></p></td>
+          <td class="customer">고객사 명</td>
+          <td>박서준</td>
+          <td class="email"><p class="textLimit">test@email.com</p></td>
+          <td class="service">전체 서비스</td>
+          <td>최상위 정책 관리자</td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td class="tListBtn"><button>재발급</button></td>
+        </tr>
+        <tr class="others">
+          <th scope="col">
+            <input type="checkbox" name="checkbox" id="chk03" class="tListchk" checked />
+            <label for="chk03">선택하기</label>
+          </th>
+          <td><p class="ico icoDeleteRed"></p></td>
+          <td class="customer">고객사 명</td>
+          <td>정우성</td>
+          <td class="email"><p class="textLimit">testdekoeawaw@email.com</p></td>
+          <td class="service">우리은행01 외 N개</td>
+          <td>정책 관리자</td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td class="tListBtn"><button>재발급</button></td>
+        </tr>
+        <tr class="others">
+          <th scope="col">
+            <input type="checkbox" name="checkbox" id="chk04" class="tListchk" checked />
+            <label for="chk04">선택하기</label>
+          </th>
+          <td><p class="ico icoDeleteRed"></p></td>
+          <td class="customer">고객사 명</td>
+          <td>이정재</td>
+          <td class="email"><p class="textLimit">test@email.com</p></td>
+          <td class="service">신한 은행-쏠 외 N개</td>
+          <td>모니터링 관리자</td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td class="tListBtn"><button>재발급</button></td>
+        </tr>
+        <tr class="others">
+          <th scope="col">
+            <input type="checkbox" name="checkbox" id="chk05" class="tListchk" />
+            <label for="chk05">선택하기</label>
+          </th>
+          <td><p class="ico icoDeleteRed"></p></td>
+          <td class="customer">고객사 명</td>
+          <td>남주혁</td>
+          <td class="email"><p class="textLimit">test@email.com</p></td>
+          <td class="service">케이뱅크 외 N개</td>
+          <td>정책 관리자</td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td class="tListBtn"><button>재발급</button></td>
+        </tr>
+        <tr class="others">
+          <th scope="col">
+            <input type="checkbox" name="checkbox" id="chk06" class="tListchk" />
+            <label for="chk06">선택하기</label>
+          </th>
+          <td><p class="ico icoDeleteRed"></p></td>
+          <td class="customer">고객사 명</td>
+          <td>박나래</td>
+          <td class="email"><p class="textLimit">test@email.com</p></td>
+          <td class="service">국민은행 외 N개</td>
+          <td>정책 관리자</td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td><p class="textLimit">YYYY-MM-DD-hh:mm:ss</p></td>
+          <td class="tListBtn"><button>재발급</button></td>
+        </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr> 
+        <tr></tr>
+        <tr></tr>
+      </tbody>
+    </table>
+    <div class="pageWrap">
+      <div class="page">
+        <button class="ico icoFirst">처음</button>
+        <button class="ico icoPrev">이전</button>
+        <input class="textBox" type="text" placeholder="1"><span class="num"> / 1</span>
+        <button class="ico icoNext">다음</button>
+        <button class="ico icoLast">마지막</button>
+      </div>
+      <div class="pageView">
+        <select name="srchHeaderName" class="pageCount ico icoArrow01">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="30" selected>30</option>
+        </select>
+        <p class="cmt">개씩 보기</p>
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+</html>
