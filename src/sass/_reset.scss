@@ -1,0 +1,53 @@
+@charset "utf-8";
+html, body{
+    @include m-p-zero;
+    @include box100;
+}
+body{
+    font-size: 12px;
+    line-height:normal;
+    color:#000;
+}
+h1, h2, h3, h4, h5, ul, ol, li ,div, p, span, a, strong, form, input, button, fieldset, label, header, footer, section{
+    @include m-p-zero;
+    @include ff_base;
+}
+img{
+    border:0;
+    font-size:0;
+    line-height:0;
+    vertical-align:middle;
+}
+ul,li,ol{
+    list-style-type:none;
+}
+a, button, input, textarea, select{
+    outline:none;border:none;
+    color:#000;
+}
+a, button{
+    cursor:pointer;
+}
+button{
+    background-color:transparent;
+    font-size:0;
+}
+a:link,a:visited,a:hover{
+    text-decoration:none;
+}
+a:active{
+    background-color:transparent;
+}
+input, textarea{
+    margin:0;
+    vertical-align:middle;
+    color:#444;
+    outline:0;
+    $bsh:none;
+}
+input:disabled{
+    background:#f0f0f0;
+}
+.blind{
+    @include blind;
+}
