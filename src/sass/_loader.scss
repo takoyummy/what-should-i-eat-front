@@ -1,17 +1,25 @@
+/* loader_page */
+.loader_page{
+    .contents_wrap{
+        padding: 0 !important;
+    }
+}
+
+/*.loader*/
 .loader{
     @include loader;
-    &:before {
-    @include loader_before;
-    }
+    &::before {
+        @include loader_before;
+    } // .loader::before
     &_wrap{
         position: relative;
         margin-top: 347px;
         .icon_thinking{
             position: absolute;
-            top: 50px;
+            top: 52px;
             left: 210px;
         }
-    }
+    } // .loader_wrap
     &_text{
         position: absolute;
         display: none;
@@ -20,18 +28,20 @@
         width: 100%;
         height: 100%;
         margin-top: 34px;
-        @include ff_nn;
-        @include fs24;
+        font-family: $ff_nanum;
+        font-size: 24px;
         font-weight: 900;
         text-align: center;
         &_flip{
             height: 15vw;
             position: relative;
             overflow: hidden;
-        }
-    }
+        } // .loader_text_flip
+    } // .loader_text
 }
-@-webkit-keyframes load3 {
+
+/* keyframes */
+@-webkit-keyframes loading {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
@@ -41,7 +51,7 @@
         transform: rotate(360deg);
     }
     }
-@keyframes load3 {
+@keyframes loading {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
@@ -51,6 +61,7 @@
         transform: rotate(360deg);
     }
 }
+
 @include mobile{
     .loader{
         width: 33.33vw;
@@ -61,17 +72,17 @@
             margin-top: 72.29vw;
             .icon_thinking{
                 position: absolute;
-                top: 10.42vw;
+                top: 10.45vw;
                 left: 43.75vw;
                 width: 12.5vw;
                 height: 12.5vw;
                 background-size: 64vw;
                 background-position: -18.33vw -18.33vw;
             }
-        }
+        } //.loader_wrap
         &_text{
             margin-top: 7.08vw;
             font-size: 5vw;
-        }
+        } //.loader_text
     }
 }

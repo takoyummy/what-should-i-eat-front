@@ -1,73 +1,3 @@
-@mixin fs_base{
-    font-size: 12px;
-    font-family: $ff_base;
-}
-@mixin ff_base{
-    font-family: $ff_base;
-}
-@mixin ff_nn{
-    font-family: $ff_nanum;
-}
-@mixin fs14{
-    font-size: 14px;
-}
-@mixin fs16{
-    font-size: 16px;
-}
-@mixin fs18{
-    font-size: 18px;
-}
-@mixin fs20{
-    font-size: 20px;
-}
-@mixin fs24{
-    font-size: 24px;
-}
-@mixin fs28{
-    font-size: 28px;
-}
-@mixin fs30{
-    font-size: 30px;
-}
-@mixin fs36{
-    font-size: 36px;
-}
-@mixin fs48{
-    font-size: 48px;
-}
-
-@mixin box-border{
-    box-sizing: border-box;
-}
-@mixin popup_box{
-    width: 320px;
-    height: 186px;
-    @include box-border;
-    @include text_center;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow : 0 4px 15px 0 rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-}
-@mixin image_defalut{
-    display: block;
-    width: 100%;
-}
-@mixin image_cover{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-@mixin m-p-zero{
-    margin: 0;
-    padding:0;
-}
-@mixin box100{
-    width: 100%;
-    height: 100%;
-}
 @mixin blind{
     position: absolute;
     clip:rect(0 0 0 0);
@@ -82,7 +12,7 @@
     clear: both;
 }
 @mixin loader{
-    font-size: 0;
+    color:transparent;
     margin: 0 auto;
     width: 160px;
     height: 160px;
@@ -94,8 +24,8 @@
     background: -ms-linear-gradient(left, #ffb600 10%, rgba(255, 255, 255, 0) 42%);
     background: linear-gradient(to right, #ffb600 10%, rgba(255, 255, 255, 0) 42%);
     position: relative;
-    -webkit-animation: load3 1.4s infinite linear;
-    animation: load3 1.4s infinite linear;
+    -webkit-animation: loading 1.4s infinite linear;
+    animation: loading 1.4s infinite linear;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
