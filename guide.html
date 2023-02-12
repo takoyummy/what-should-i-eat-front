@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/dist/css/layout.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>뭐먹지? - 이용 가이드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/dist/css/layout.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </head>
 <body>
-    <section class="guide">
+    <section class="contents_wrap guide">
+        <h1 class="blind">뭐먹지?</h1>
         <h2 class="blind">이용 가이드</h2>
-        <div class="contents"></div>
+        <div class="contents">
+            <div class="util">
+                <a href="main.html" class="icon icon_arrow">이전</a>
+                <div class="pagebar"></div>
+            </div>
+            <div class="title_wrap">
+                <p class="title_wrap_subject">이용 가이드<span class="icon icon_teacher">선생님 이미지</span></p>
+                <p class="title_wrap_contents">상암에서 근무하는 직장인을 위해 만들었어요.<br />뭐먹지의 점심 추천을 받아 보세요.</p>
+            </div>
+            <swiper-container class="mySwiper" space-between="18">
+                <swiper-slide class="guide_slider">
+                    <div class="icon_box"><div class="icon icon_paper">가이드 이미지</div></div>
+                    <p class="guide_slider_text">이용 가이드를 숙지한다.</p>
+                </swiper-slide>
+                <swiper-slide class="guide_slider">
+                    <div class="icon_box"><div class="icon icon_dish">식기 이미지</div></div>
+                    <p class="guide_slider_text">어제 먹은 메뉴를 입력한다.</p>
+                </swiper-slide>
+                <swiper-slide class="guide_slider">
+                    <div class="icon_box"><div class="icon icon_defy">엑스자를 그리는 사람 이미지</div></div>
+                    <p class="guide_slider_text">불호하는 메뉴를 입력한다.</p>
+               </swiper-slide>
+                <swiper-slide class="guide_slider">
+                    <div class="icon_box"><div class="icon icon_noodle">스파게티 이미지</div></div>
+                    <p class="guide_slider_text">딱 맞는 메뉴를 추천 받는다.</p>
+                </swiper-slide>
+                <swiper-slide class="guide_slider">
+                    <div class="icon_box"><div class="icon icon_full_smile">웃으며 입맛을 다시는 표정</div></div>
+                    <p class="guide_slider_text">만족스러운 점심 냠냠 굿!</p>
+                </swiper-slide>
+
+            </swiper-container>
+        </div>
+        <a href="yesterday_menu.html" class="wide_button">시작하기</a>
     </section>
 </body>
 </html>

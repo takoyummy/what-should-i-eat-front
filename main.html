@@ -2,83 +2,110 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/dist/css/layout.css">
-    <script src="notosans.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>뭐먹지?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/dist/css/layout.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
-    <!-- popup -->
-    <div class="popup">
-        <div class="icon icon_heart"></div>
-        <p class="popup_text">후원의 마음만 받을게요</p>
-    </div>
-    <div class="popup">
-        <div class="icon icon_cheer"></div>
-        <p class="popup_text">응원 감사합니다</p>
-    </div>
-    <div class="popup">
-        <div class="icon icon_wait"></div>
-        <p class="popup_text">업데이트 예정입니다.<br />조금만 기다려주세요.</p>
-    </div>
-    <div class="popup">
-        <div class="icon icon_preparing"></div>
-        <p class="popup_text">이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요.</p>
-    </div>
-    <!-- // popup -->
-    <section class="main">
-        <h2 class="blind">뭐먹지?</h2>
-        <div class="main_visual">
-            <div class="title_wrap type1">
-                <p class="title_wrap_subject">뭐먹지?</p>
-                <p class="title_wrap_desc">직장인 최대 난제 점심메뉴<br />뭐먹지로 해결하세요!</p>
-            </div>
-        </div>
-        <div class="contents">
-            <nav class="main_menu">
-                <ul>
-                    <li class="main_menu_list type1">
-                        <a href="#">
-                            메뉴추천
-                            <p class="text">뭐먹지의 점심 추천을<br /> 받아 보세요</p>
-                            <div class="icon_box">
-                                <p class="icon icon_soup">수프 이미지</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="main_menu_list main_menu_restaurant">
-                        <a href="#">
-                            <div class="icon icon_restaurant"></div>
-                            식당추천
-                        </a>
-                    </li>
-                    <li class="main_menu_list main_menu_party">
-                        <a href="#">
-                            <div class="icon icon_party"></div>
-                            점심팟
-                        </a>
-                    </li>
-                    <li class="main_menu_list main_menu_schedule">
-                        <a href="#">
-                            <div class="icon icon_schedule"></div>
-                            점심 스케줄러
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <footer class="main_footer">
-                <ul class="main_footer_top">
-                    <li><a href="#">후원하기💖</a></li>
-                    <li><a href="#">응원하기🙌</a></li>
-                    <li><a href="#">요청하기📣</a></li>
-                </ul>
-                <div class="main_footer_bottom">
-                    <strong>뭐먹지? </strong>Copyright©뭐먹지 All rights reserved.
+    <div class="main">
+        <main class="main_contents">
+            <div class="main_visual">
+                <div class="title_wrap type1">
+                    <h1 class="title_wrap_subject">뭐먹지?<span class="beta">BETA</span></h1>
+                    <p class="title_wrap_desc">직장인 최대 난제 점심메뉴<br />뭐먹지로 해결하세요!</p>
                 </div>
-            </footer>
+            </div>
+            <div class="contents">
+                <nav class="main_menu">
+                    <ul>
+                        <li class="main_menu_list type1">
+                            <a class="main_menu_list_box" href="guide.html">
+                                메뉴추천
+                                <p class="text">
+                                    <span>뭐먹지의 점심 추천을 </span><span>받아 보세요</span>
+                                </p>
+                                <div class="icon_box">
+                                    <p class="icon icon_soup">수프 이미지</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="main_menu_list main_menu_restaurant">
+                            <a class="main_menu_list_box" href="#">
+                                <div class="icon icon_restaurant">식당가 이미지</div>
+                                식당추천
+                            </a>
+                        </li>
+                        <li class="main_menu_list main_menu_party">
+                            <a class="main_menu_list_box" href="#">
+                                <div class="icon icon_party">남자와 여자 이미지</div>
+                                점심팟
+                            </a>
+                        </li>
+                        <li class="main_menu_list main_menu_schedule">
+                            <a class="main_menu_list_box" href="#">
+                                <div class="icon icon_schedule">달력 이미지</div>
+                                점심 스케줄러
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+        <footer class="main_footer">
+            <ul class="main_footer_top">
+                <li><a class="main_footer_top_link support" href="#">후원하기💖</a></li>
+                <li><a class="main_footer_top_link cheer" href="#">응원하기🙌</a></li>
+                <li><a class="main_footer_top_link request" href="#" target="_blank">요청하기📣</a></li><!-- 피드백 폼 제작시 추후 url 삽입 -->
+            </ul>
+            <div class="main_footer_bottom">
+                <strong>뭐먹지? </strong>Copyright©뭐먹지 All rights reserved.
+            </div>
+        </footer>
+         <!-- popup -->
+         <div class="popup support">
+            <p class="popup_text">후원의 마음만 받을게요</p>
         </div>
-    </section>
+        <div class="popup cheer">
+            <p class="popup_text">응원 감사합니다</p>
+        </div>
+        <div class="popup wait">
+            <p class="popup_text">업데이트 예정입니다.<br />조금만 기다려주세요.</p>
+        </div>
+        <div class="popup preparing">
+            <p class="popup_text">이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요.</p>
+        </div>
+        <!-- // popup -->
+    </div>
+    <script>
+    $(document).ready(function(){
+        $('.popup').click(function(){
+            $(this).hide();
+        });
+        $('.main_menu_restaurant').click(function(){
+            $('.popup.wait').show();
+            return false;
+        });
+        $('.main_menu_party').click(function(){
+            $('.popup.wait').show();
+            return false;
+        });
+        $('.main_menu_schedule').click(function(){
+            $('.popup.wait').show();
+            return false;
+        });
+        $('.main_footer .support').click(function(){
+            $('.popup.support').show();
+            return false;
+        });
+        $('.main_footer .cheer').click(function(){
+            $('.popup.cheer').show();
+            return false;
+        });
+    });
+    </script>
 </body>
 </html>

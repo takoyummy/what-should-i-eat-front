@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/dist/css/layout.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>뭐먹지? - 불호하는 메뉴</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/dist/css/layout.css" />
 </head>
 <body>
-    <section class="guide">
+    <section class="contents_wrap dislike_menu">
+        <h1 class="blind">뭐먹지?</h1>
         <h2 class="blind">불호하는 메뉴</h2>
-        <div class="contents"></div>
+        <div class="contents">
+            <div class="util">
+                <a href="yesterday_menu.html" class="icon icon_arrow">이전</a>
+                <div class="pagebar type2"></div>
+            </div>
+            <div class="title_wrap">
+                <p class="title_wrap_subject">불호하는 메뉴가 있나요?<span class="icon icon_defy">엑스자를 그리는 사람 이미지</span></p>
+                <p class="title_wrap_contents">불호하는 메뉴가 없다면 넘어가도 괜찮아요.</p>
+            </div>
+            <!-- 개발 :: 유효성 검사 -->
+            <form>
+                <div class="text_box">
+                    <label class="type" for="dislike_menu_text">입력</label>
+                    <input id="dislike_menu_text" type="text" placeholder="예시) 마라탕" maxlength="16" required />
+                    <p class="text_box_focus">이 메뉴를 싫어하시는군요!</p>
+                </div>
+                <button type="submit" class="wide_button" onClick="link()">입력 완료</button>
+            </form>
+            <!-- // 개발 :: 유효성 검사 -->
+        </div>
     </section>
+    <script>
+        function link(){
+            location.href = 'loader.html'
+        }
+    </script>
 </body>
 </html>

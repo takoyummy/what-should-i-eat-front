@@ -1,89 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/dist/css/layout.css">
-    <script src="notosans.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>뭐먹지 - ui</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/dist/css/layout.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 </head>
 <body>
-<!-- loadbar -->
-<div class="loadbar"></div>
-<div class="loadbar type1"></div>
-<div class="loadbar type2"></div>
-<!-- // loadbar -->
+<!-- pagebar -->
+<div class="pagebar"></div>
+<div class="pagebar type1"></div>
+<div class="pagebar type2"></div>
+<!-- // pagebar -->
 
 <!-- guide_slider -->
-<div class="guide_slider">
-    <div class="icon_box"><div class="icon icon_paper"></div></div>
-    <p class="guide_slider_text">이용 가이드를 숙지한다.</p>
-</div>
-<div class="guide_slider">
-    <div class="icon_box"><div class="icon icon_dish"></div></div>
-    <p class="guide_slider_text">어제 먹은 메뉴를 입력한다.</p>
-</div>
-<div class="guide_slider">
-    <div class="icon_box"><div class="icon icon_defy"></div></div>
-    <p class="guide_slider_text">불호하는 메뉴를 입력한다.</p>
-</div>
-<div class="guide_slider">
-    <div class="icon_box"><div class="icon icon_noodle"></div></div>
-    <p class="guide_slider_text">딱 맞는 메뉴를 추천 받는다.</p>
-</div>
-<div class="guide_slider">
-    <div class="icon_box"><div class="icon icon_full_smile"></div></div>
-    <p class="guide_slider_text">만족스러운 점심 냠냠 굿!</p>
-</div>
+<swiper-container class="mySwiper" space-between="18">
+    <swiper-slide class="guide_slider">
+        <div class="icon_box"><div class="icon icon_paper">가이드 이미지</div></div>
+        <p class="guide_slider_text">이용 가이드를 숙지한다.</p>
+    </swiper-slide>
+    <swiper-slide class="guide_slider">
+        <div class="icon_box"><div class="icon icon_dish">식기 이미지</div></div>
+        <p class="guide_slider_text">어제 먹은 메뉴를 입력한다.</p>
+    </swiper-slide>
+    <swiper-slide class="guide_slider">
+        <div class="icon_box"><div class="icon icon_defy">엑스자를 그리는 사람 이미지</div></div>
+        <p class="guide_slider_text">불호하는 메뉴를 입력한다.</p>
+   </swiper-slide>
+    <swiper-slide class="guide_slider">
+        <div class="icon_box"><div class="icon icon_noodle">스파게티 이미지</div></div>
+        <p class="guide_slider_text">딱 맞는 메뉴를 추천 받는다.</p>
+    </swiper-slide>
+    <swiper-slide class="guide_slider">
+        <div class="icon_box"><div class="icon icon_full_smile">웃으며 입맛을 다시는 표정</div></div>
+        <p class="guide_slider_text">만족스러운 점심 냠냠 굿!</p>
+    </swiper-slide>
+
+</swiper-container>
 <!-- // guide_slider -->
+
 <!-- title_wrap -->
 <div class="title_wrap">
-    <p class="title_wrap_subject">이용 가이드<span class="icon icon_teacher"></span></p>
+    <p class="title_wrap_subject">이용 가이드<span class="icon icon_teacher">선생님 이미지</span></p>
     <p class="title_wrap_contents">상암에서 근무하는 직장인을 위해 만들었어요.<br />뭐먹지의 점심 추천을 받아 보세요.</p>
 </div>
 <div class="title_wrap">
-    <p class="title_wrap_subject">어제 어떤 메뉴를 드셨나요?<span class="icon icon_chef"></span></p>
+    <p class="title_wrap_subject">어제 어떤 메뉴를 드셨나요?<span class="icon icon_chef">쉐프 이미지</span></p>
     <p class="title_wrap_contents">기억이 나지 않는다면 넘어가도 괜찮아요.</p>
 </div>
 <div class="title_wrap">
-    <p class="title_wrap_subject">불호하는 메뉴가 있나요?<span class="icon icon_defy"></span></p>
+    <p class="title_wrap_subject">불호하는 메뉴가 있나요?<span class="icon icon_defy">엑스자를 그리는 사람 이미지</span></p>
     <p class="title_wrap_contents">불호하는 메뉴가 없다면 넘어가도 괜찮아요.</p>
 </div>
 <div class="title_wrap type2">
-    <p class="title_wrap_subject">오늘 당신에게 딱 맞는<br />점심 메뉴는?<span class="icon icon_chef"></span></p>
+    <p class="title_wrap_subject">오늘 당신에게 딱 맞는<br />점심 메뉴는?<span class="icon icon_chef">쉐프 이미지</span></p>
 </div>
 <!--// title_wrap -->
-<!-- btn -->
+
+<!-- button -->
 <button class="icon icon_arrow">이전</button>
 <button class="icon icon_cancel">닫기</button>
-<a href="#" class="btn">시작하기</a>
-<a href="#" class="btn">입력 완료</a>
-<a href="#" class="btn type1">한 번 더</a>
-<a href="#" class="btn">너로 정했다!</a>
-<!-- // btn -->
+<a href="#" class="wide_button">시작하기</a>
+<a href="#" class="wide_button">입력 완료</a>
+<a href="#" class="wide_button">너로 정했다!</a>
+<a href="#" class="wide_button type1">한 번 더</a>
+<!-- // button -->
+
 <!-- input -->
 <form title="text_form">
     <div class="text_box">
-        <p class="type">입력</p>
+        <label class="type" for="yesterday_menu_text">입력</label>
         <input id="yesterday_menu_text" type="text" placeholder="예시) 마라탕" maxlength="16"/>
-        <label for="yesterday_menu_text">어제 이 메뉴를 드셨군요!</label>
+        <p class="text_box_focus">어제 이 메뉴를 드셨군요!</p>
     </div>
 </form>
 <form title="text_form">
     <div class="text_box">
-        <p class="type">입력</p>
+        <label class="type" for="dislike_menu_text">입력</label>
         <input id="dislike_menu_text" type="text" placeholder="예시) 마라탕" maxlength="16"/>
-        <label for="dislike_menu_text">이 메뉴를 싫어하시는군요!</label>
+        <p class="text_box_focus ">이 메뉴를 싫어하시는군요!</p>
     </div>
 </form>
 <!-- // input -->
+
 <!-- recommend_wrap :: 개발 :: 이미지, 상호명, 주소명, 링크 주소 -->
 <div class="recommend_wrap">
     <div class="recommend">
         <div class="recommend_box">
-            <img class="recommend_img" src="./src/images/test.jpg" alt="">
+            <img class="recommend_img" src="./src/images/test.jpg" alt="" />
         </div>
         <p class="recommend_title">개미집 상암점</p>
         <div class="recommend_address">
@@ -97,16 +105,17 @@
     </div>
 </div>
 <!-- // recommend_wrap -->
+
 <!-- recommend_another :: 개발 :: 이미지, 상호명 -->
 <div class="recommend_another">
     <p class="recommend_another_title">이 메뉴도 좋아할 거에요!</p>
     <ul class="recommend_another_wrap">
         <li class="recommend_another_box">
-            <div class="recommend_another_img_box"><img class="recommend_another_img" src="./src/images/test.jpg" alt=""></div>
+            <div class="recommend_another_img_box"><img class="recommend_another_img" src="./src/images/test.jpg" alt="" /></div>
             <p class="recommend_another_text">도락</p>
         </li>
         <li class="recommend_another_box">
-            <div class="recommend_another_img_box"><img class="recommend_another_img" src="./src/images/test.jpg" alt=""></div>
+            <div class="recommend_another_img_box"><img class="recommend_another_img" src="./src/images/test.jpg" alt="" /></div>
             <p class="recommend_another_text">상암회관</p>
         </li>
     </ul>
@@ -115,19 +124,16 @@
 
 <script>
 function clip(){
-
-var url = ''; 
-var textarea = document.createElement("textarea");  
-
-document.body.appendChild(textarea);
-url = window.document.location.href;
-textarea.value = url;
-textarea.select();
-document.execCommand("copy");
-document.body.removeChild(textarea);
-
-alert("URL이 복사되었습니다.")
-}
+    var url = '';
+    var textarea = document.createElement("textarea");
+    document.body.appendChild(textarea);
+    url = 'https://naver.me/Fcagg6Mm';
+    textarea.value = url;
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+    alert("url이 복사되었습니다.")
+};
 </script>
 </body>
 </html>
