@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="src/dist/css/layout.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
 <!-- main menu -->
@@ -61,20 +60,6 @@
         </footer>
 <!--// main footer-->
 
-<!-- popup -->
-<div class="popup support">
-    <p class="popup_text">후원의 마음만 받을게요</p>
-</div>
-<div class="popup cheer">
-    <p class="popup_text">응원 감사합니다</p>
-</div>
-<div class="popup wait">
-    <p class="popup_text">업데이트 예정입니다.<br />조금만 기다려주세요.</p>
-</div>
-<div class="popup preparing">
-    <p class="popup_text">이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요.</p>
-</div>
-<!-- // popup -->
 
 <!-- pagebar -->
 <div class="pagebar"></div>
@@ -204,31 +189,6 @@ function clip(){
     alert("url이 복사되었습니다.")
 };
 
-$(document).ready(function(){
-    $('.popup').click(function(){
-        $(this).hide();
-    });
-    $('.main_menu_restaurant').click(function(){
-        $('.popup.wait').show();
-        return false;
-    });
-    $('.main_menu_party').click(function(){
-        $('.popup.wait').show();
-        return false;
-    });
-    $('.main_menu_schedule').click(function(){
-        $('.popup.wait').show();
-        return false;
-    });
-    $('.main_footer .support').click(function(){
-        $('.popup.support').show();
-        return false;
-    });
-    $('.main_footer .cheer').click(function(){
-        $('.popup.cheer').show();
-        return false;
-    });
-});
 </script>
 </body>
 </html>
