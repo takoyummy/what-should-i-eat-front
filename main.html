@@ -22,32 +22,32 @@
             <div class="contents">
                 <nav class="main_menu">
                     <ul>
-                        <li class="main_menu_list type1">
+                        <li class="main_menu_list wide">
                             <a class="main_menu_list_box" href="guide.html">
                                 메뉴추천
                                 <p class="text">
                                     <span>뭐먹지의 점심 추천을 </span><span>받아 보세요</span>
                                 </p>
                                 <div class="icon_box">
-                                    <p class="icon icon_soup">수프 이미지</p>
+                                    <p class="icon icon_soup"></p>
                                 </div>
                             </a>
                         </li>
                         <li class="main_menu_list main_menu_restaurant">
                             <a class="main_menu_list_box" href="#">
-                                <div class="icon icon_restaurant">식당가 이미지</div>
+                                <div class="icon icon_restaurant"></div>
                                 식당추천
                             </a>
                         </li>
                         <li class="main_menu_list main_menu_party">
                             <a class="main_menu_list_box" href="#">
-                                <div class="icon icon_party">남자와 여자 이미지</div>
+                                <div class="icon icon_party"></div>
                                 점심팟
                             </a>
                         </li>
                         <li class="main_menu_list main_menu_schedule">
                             <a class="main_menu_list_box" href="#">
-                                <div class="icon icon_schedule">달력 이미지</div>
+                                <div class="icon icon_schedule"></div>
                                 점심 스케줄러
                             </a>
                         </li>
@@ -82,27 +82,23 @@
     </div>
     <script>
     $(document).ready(function(){
-        $('.popup').click(function(){
-            $(this).hide();
-        });
         $('.main_menu_restaurant').click(function(){
-            $('.popup.wait').show();
-            return false;
+            $('.popup.wait').fadeIn(300).delay(1000).fadeOut(300);
         });
         $('.main_menu_party').click(function(){
-            $('.popup.wait').show();
+            $('.popup.wait').fadeIn(300).delay(1000).fadeOut(300);
             return false;
         });
         $('.main_menu_schedule').click(function(){
-            $('.popup.wait').show();
+            $('.popup.wait').fadeIn(300).delay(1000).fadeOut(300);
             return false;
         });
         $('.main_footer .support').click(function(){
-            $('.popup.support').show();
+            $('.popup.support').fadeIn(300).delay(1000).fadeOut(300);
             return false;
         });
         $('.main_footer .cheer').click(function(){
-            $('.popup.cheer').show();
+            $('.popup.cheer').fadeIn(300).delay(1000).fadeOut(300);
             return false;
         });
     });
