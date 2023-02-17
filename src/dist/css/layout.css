@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("../../images/sprite/sprite.css");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
@@ -23,7 +24,6 @@ h1, h2, h3, h4, h5, ul, ol, li, div, p, span, a, strong, form, input, button, fi
 
 img {
   border: 0;
-  line-height: 0;
   vertical-align: top;
 }
 
@@ -32,9 +32,9 @@ ul, li, ol {
 }
 
 a, button, input, textarea, select {
-  outline: none;
-  border: none;
   color: #000;
+  outline: transparent;
+  border: transparent;
 }
 
 a, button {
@@ -43,7 +43,6 @@ a, button {
 
 button {
   background-color: transparent;
-  font-size: 0;
 }
 
 a:link, a:visited, a:hover {
@@ -58,7 +57,7 @@ input, textarea {
   margin: 0;
   vertical-align: middle;
   color: #444;
-  outline: 0;
+  outline: transparent;
   box-shadow: none;
 }
 
@@ -309,6 +308,7 @@ input:disabled {
   width: 18vw;
   max-width: 56px;
   margin-right: 10px;
+  font-weight: bold;
 }
 .recommend_address_text {
   float: left;
@@ -316,6 +316,9 @@ input:disabled {
   width: 49vw;
   line-height: 20px;
   text-align: left;
+}
+.recommend_address_text strong {
+  font-weight: normal;
 }
 .recommend_address_share {
   float: right;
@@ -626,6 +629,13 @@ input:disabled {
   .icon {
     background-size: 64vw;
   }
+  /*
+  아이콘 순서대로 추가합니다.
+  $icon_list: 아이콘 클래스명
+  $bp: background-position
+  $w: width
+  $h: height
+  */
   .icon_arrow {
     background-position: -54.58vw -37.92vw;
     width: 7.04vw;
@@ -824,6 +834,11 @@ input:disabled {
 }
 .main_menu {
   width: 405px;
+  /*
+  li 순서대로 추가합니다.
+  $color_list: 배경색
+  $li_list: main_menu_뒤에 붙는 클래스명
+  */
 }
 .main_menu ul {
   display: flex;
@@ -844,22 +859,22 @@ input:disabled {
   flex-basis: 125px;
   border-radius: 15px;
 }
-.main_menu_list.type1 {
+.main_menu_list.wide {
   margin-bottom: 20px;
   background-color: #ffe769;
 }
-.main_menu_list.type1 .main_menu_list_box {
+.main_menu_list.wide .main_menu_list_box {
   font-size: 28px;
   text-align: left;
   padding: 43px 47px 40px 37px;
 }
-.main_menu_list.type1 .text {
+.main_menu_list.wide .text {
   font-size: 14px;
   font-family: "NanumSquare", "san-serif";
   margin-top: 6px;
   font-weight: 600;
 }
-.main_menu_list.type1 .icon_box {
+.main_menu_list.wide .icon_box {
   width: 93px;
   height: 93px;
   background-color: #fff5c0;
@@ -868,7 +883,7 @@ input:disabled {
   top: 23.9px;
   right: 47.4px;
 }
-.main_menu_list.type1 .icon_soup {
+.main_menu_list.wide .icon_soup {
   margin: 20px auto 0 auto;
 }
 .main_menu_list_box {
@@ -884,7 +899,7 @@ input:disabled {
 .main_menu_list .icon {
   margin: 0 auto 20px auto;
 }
-.main_menu .main_menu_list.type1 {
+.main_menu .main_menu_list.wide {
   flex-basis: 100%;
 }
 .main_footer {
@@ -952,23 +967,23 @@ input:disabled {
     flex-basis: 26.04vw;
     border-radius: 3.13vw;
   }
-  .main .main_menu_list.type1 {
+  .main .main_menu_list.wide {
     margin-bottom: 4.17vw;
   }
-  .main .main_menu_list.type1 .main_menu_list_box {
+  .main .main_menu_list.wide .main_menu_list_box {
     font-size: 5.83vw;
     padding: 8.96vw 8.96vw 8.33vw 7.71vw;
   }
-  .main .main_menu_list.type1 .icon_box {
+  .main .main_menu_list.wide .icon_box {
     width: 19.38vw;
     height: 19.38vw;
     top: 4.98vw;
     right: 9.88vw;
   }
-  .main .main_menu_list.type1 .icon_soup {
+  .main .main_menu_list.wide .icon_soup {
     margin: 4.17vw auto 0 auto;
   }
-  .main .main_menu_list.type1 span {
+  .main .main_menu_list.wide span {
     display: block;
   }
   .main .main_menu_list_box {
