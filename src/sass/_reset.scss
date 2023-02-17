@@ -17,22 +17,21 @@ h1, h2, h3, h4, h5, ul, ol, li ,div, p, span, a, strong, form, input, button, fi
 }
 img{
     border:0;
-    line-height:0;
     vertical-align: top;
 }
 ul,li,ol{
     list-style-type:none;
 }
 a, button, input, textarea, select{
-    outline:none;border:none;
     color:#000;
+    outline: transparent;
+    border: transparent;
 }
 a, button{
     cursor:pointer;
 }
 button{
     background-color:transparent;
-    font-size:0;
 }
 a:link,a:visited,a:hover{
     text-decoration:none;
@@ -44,7 +43,7 @@ input, textarea{
     margin:0;
     vertical-align:middle;
     color:#444;
-    outline:0;
+    outline:transparent;
     box-shadow:none;
 }
 input:disabled{

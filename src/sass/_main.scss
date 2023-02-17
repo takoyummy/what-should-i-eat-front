@@ -41,6 +41,11 @@
             justify-content:space-between;
             flex-wrap:wrap;
         } // .main_menu ul
+        /*
+        li 순서대로 추가합니다.
+        $color_list: 배경색
+        $li_list: main_menu_뒤에 붙는 클래스명
+        */
         $color_list:(#fff1f2, #e6ffda, #e3faff);
         $li_list:(restaurant, party, schedule);
         @for $i from 1 through length($li_list){
@@ -52,7 +57,7 @@
             position:relative;
             flex-basis:125px;
             border-radius:15px;
-            &.type1{
+            &.wide{
                 margin-bottom:20px;
                 background-color:#ffe769;
                 .main_menu_list_box{
@@ -78,7 +83,7 @@
                 .icon_soup{
                     margin:20px auto 0 auto;
                 }
-            }
+            }// .main_menu_list_wide
             &_box{
                 display:block;
                 padding:27px 14.5px 18px;
@@ -89,12 +94,12 @@
                 font-weight:900;
                 text-align:center;
                 
-            }
+            }// .main_menu_list_box
             .icon{
                 margin:0 auto 20px auto;
             }
         } // .main_menu_list
-        .main_menu_list.type1{flex-basis:100%;}
+        .main_menu_list.wide{flex-basis:100%;}
     } // .main_menu
     
     /* .main_footer */
@@ -166,7 +171,7 @@
             &_list{
                 flex-basis:26.04vw;
                 border-radius:3.13vw;
-                &.type1{
+                &.wide{
                     margin-bottom:4.17vw;
                     .main_menu_list_box{
                         font-size:5.83vw;
@@ -182,7 +187,7 @@
                         margin:4.17vw auto 0 auto;
                     }
                     span{display:block;}
-                } // .main_menu_list.type1
+                } // .main_menu_list.wide
                 &_box{
                     padding:5.63vw 3.02vw 3.75vw;
                     border-radius:3.13vw;

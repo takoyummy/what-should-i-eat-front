@@ -1,7 +1,7 @@
 /* .icon */
 .icon{
     background-image:url('../../../src/images/sprite/sprite.png');
-    color:transparent;
+    color: transparent;
     &_cancel{display:inline-block;}
 }
 
@@ -228,6 +228,7 @@
             width:18vw;
             max-width:56px;
             margin-right:10px;
+            font-weight: bold;
         } // .recommend_address_title
         &_text{
             float:left;
@@ -235,6 +236,7 @@
             width:49vw;
             line-height:20px;
             text-align:left;
+            strong{font-weight: normal;}
         } // .recommend_address_text
         &_share{
             float:right;
@@ -549,7 +551,13 @@
     .icon{
         background-size:64vw;
     }
-
+    /*
+    아이콘 순서대로 추가합니다.
+    $icon_list: 아이콘 클래스명
+    $bp: background-position
+    $w: width
+    $h: height
+    */
     $icon_list:(arrow, cancel, cheer, chef, defy, full_smile, heart, noodle, party, perparing, restaurant, schedule, soup, teacher, thinking, wait, paper, dish);
     $bp:(-54.58vw -37.92vw, -47.5vw -36.46vw, -18.13vw 0, -54.58vw -28.54vw, -44.3vw -18.33vw, -29.2vw -37vw, 0 -18.33vw, -9.8vw -37vw, -20.17vw -37.46vw, -19.17vw 0, -39.13vw -37.46vw, -55.58vw 0, -32.5vw -18.5vw, -54.58vw -19.17vw, -18.33vw -18.33vw, 0 0, 0 -37.46vw, -55.5vw -9.6vw);
     $w:(7.04vw, 6vw, 17.08vw, 8.33vw, 8.54vw, 8.33vw, 17.29vw, 8.54vw, 8.54vw, 17.29vw, 8.33vw, 8.33vw, 10.63vw, 8.33vw, 12.5vw, 17.08vw, 8.54vw, 8.5vw);
