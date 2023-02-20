@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="뭐먹지?는 직장인의 점심 계획 및 메뉴 결정을 간편하게 합니다. 점심 일정을 조율하고 메뉴를 결정하는 번거로움과 작별 인사를 하세요. 점심 스케줄을 쉽게 효율적으로 관리할 수 있도록 도와드립니다." />
+    <title>뭐먹지? - 추천 결과</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/dist/css/layout.css" />
+</head>
+<body>
+    <section class="contents_wrap recommend_result">
+        <h1 class="blind">뭐먹지?</h1>
+        <h2 class="blind">추천 결과</h2>
+        <div class="contents">
+            <a href="main.html" class="icon icon_cancel">닫기</a>
+            <div class="title_wrap type2">
+                <p class="title_wrap_subject">
+                    <span class="text">오늘 당신에게 딱 맞는</span>
+                    <span class="text">점심 메뉴는?<span class="icon icon_chef"></span></span>
+                </p>
+            </div>
+            <!-- recommend :: 개발 :: 이미지, 상호명, 주소명, 링크 주소 -->
+            <div class="recommend">
+                <div class="recommend_box">
+                    <img class="recommend_img" src="./src/images/test.jpg" alt="" />
+                </div>
+                <p class="recommend_title">개미집 상암점</p>
+                <div class="recommend_address">
+                    <p class="recommend_address_title">상세주소</p>
+                    <p class="recommend_address_text"><strong>서울 마포구 월드컵북로 396 누리꿈스퀘어 공동제작센터 2층</strong></p>
+                    <ul class="recommend_address_share">
+                        <li><a href="https://naver.me/Fcagg6Mm" onclick="clip(); return false;">공유하기🔗</a></li>
+                        <li><a href="https://naver.me/Fcagg6Mm" target="_blank" title="새 창">네이버지도🗺</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- // recommend -->
+            <div class="line"></div>
+            <!-- recommend_another :: 개발 :: 이미지, 상호명, 링크값 -->
+            <div class="recommend_another">
+                <p class="recommend_another_title">이 메뉴도 좋아할 거에요!</p>
+                <ul class="recommend_another_wrap">
+                    <li class="recommend_another_box">
+                        <a class="recommend_another_box_link" href="#">
+                            <div class="recommend_another_img_box"><img class="recommend_another_img" src="./src/images/test.jpg" alt="" /></div>
+                            <p class="recommend_another_text">도락</p>
+                         </a>
+                    </li>
+                    <li class="recommend_another_box">
+                        <a class="recommend_another_box_link" href="#">
+                            <div class="recommend_another_img_box"><img class="recommend_another_img" src="./src/images/test.jpg" alt="" /></div>
+                            <p class="recommend_another_text">상암회관</p>
+                         </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- // recommend_another -->
+        </div>
+        <a href="main.html" class="wide_button">너로 정했다!</a> <!-- 개발 :: 메인화면으로 돌아갈 시, .preparing 팝업 띄우기  -->
+        <a href="loader.html" class="wide_button type1">한 번 더</a>
+    </section>
+    <script>
+        function clip(){
+            var url = '';
+            var textarea = document.createElement("textarea");
+            document.body.appendChild(textarea);
+            url = 'https://naver.me/Fcagg6Mm';
+            textarea.value = url;
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            alert("url이 복사되었습니다.")
+        };
+    </script>
+</body>
+</html>
