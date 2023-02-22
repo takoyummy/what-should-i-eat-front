@@ -1,0 +1,39 @@
+.main_visual{
+    position:relative;
+    min-height:332px;
+    box-sizing:border-box;
+    padding:124px 46px 61px;
+
+    &::after{
+        content:'';
+        display:block;
+        background-image:url('../../images/main_visual.png');
+        width:264px;
+        height:365px;
+        position:absolute;
+        top:33.7px;
+        right:14.5px;
+    } // .main_visual::after
+
+} // .main_visual
+
+@include mobile{
+
+    .main{
+        
+        .main_visual{
+            padding:25.83vw 9.58vw 12.71vw;
+            min-height:69.17vw;
+
+            &::after{
+                width:55vw;
+                height:76.04vw;
+                top:7.02vw;
+                right:3.02vw;
+                background-size:55vw;
+            } // .main_visual::after
+
+        }
+
+    }
+}

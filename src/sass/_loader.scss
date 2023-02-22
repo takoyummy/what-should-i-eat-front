@@ -1,0 +1,110 @@
+html, body{
+    height:unset;
+}
+
+/* loader_page */
+.loader_page{
+
+    .contents_wrap{
+        padding:0 !important;
+    }
+
+}
+
+/*.loader*/
+.loader{
+    @include loader;
+
+    &::before{
+        @include loader_before;
+    } // .loader::before
+
+    &_wrap{
+        position:relative;
+        margin-top: 33vh;
+
+        &::after{
+            content: '';
+            display: block;
+            position:absolute;
+            top:52px;
+            left:210px;
+            background-position: -88px -88px;
+            width: 60px;
+            height: 60px;
+        }
+
+    } // .loader_wrap
+
+    &_text{
+        position:absolute;
+        display:none;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        margin-top:34px;
+        font-family:$ff_nanum;
+        font-size:24px;
+        font-weight:900;
+        text-align:center;
+
+        &_flip{
+            height:15vw;
+            position:relative;
+            overflow:hidden;
+        } // .loader_text_flip
+
+    } // .loader_text
+
+}
+
+/* keyframes */
+@-webkit-keyframes loading{
+    0%{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+    }
+@keyframes loading{
+    0%{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+@include mobile{
+    .loader{
+        width:33.33vw;
+        height:33.33vw;
+
+        &_wrap{
+            position:relative;
+            width:100vw;
+
+            &::after{
+                top:10.45vw;
+                left:43.75vw;
+                width:12.5vw;
+                height:12.5vw;
+                background-position:-18.33vw -18.33vw;
+            }
+
+        } //.loader_wrap
+
+        &_text{
+            margin-top:7.08vw;
+            font-size:5vw;
+        } //.loader_text
+
+    }
+    
+}

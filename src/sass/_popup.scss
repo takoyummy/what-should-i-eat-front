@@ -1,0 +1,89 @@
+.main{
+
+    .popup{
+        position:fixed;
+        display: none;
+        top:33.3%;
+        left:calc(50% - 160px);
+        width:320px;
+        min-height:186px;
+        padding:31px 60px 32px;
+        box-sizing:border-box;
+        border-radius:20px;
+        backdrop-filter:blur(10px);
+        box-shadow:0 4px 15px 0 rgb(0 0 0 / 10%);
+        background-color:rgba(255, 255, 255, 0.9);
+        z-index:10;
+
+        &::before{
+            content:'';
+            display:block;
+            margin:0 auto;
+            background-position:0px -88px;
+            width:83px;
+            height:82px;
+        } // .popup::before
+
+        &.cheer::before{
+            background-position:-87px 0px;
+        } // .popup.cheer::before
+
+        &.wait::before{
+            background-position:0 0;
+        } // .popup.wait::before
+
+        &.preparing::before{
+            background-position:-174px 0px;
+        } // .popup.preparing::before
+
+        &_text{
+            font-size:18px;
+            text-align:center;
+            margin-top:10px;
+        } // .popup_text
+
+    }
+
+}
+
+@include mobile{
+
+    .main{
+
+        .popup{
+            left:calc(50% - 33.33vw);
+            width:66.67vw;
+            min-height:38.75vw;
+            padding:6.46vw 12.5vw 6.67vw;
+            border-radius:4.17vw;
+            backdrop-filter:blur(2.08vw);
+
+            &::before{
+                background-size:64vw;
+                width: 17.29vw;
+                height: 17.08vw;
+                background-position: 0 -18.33vw;
+            } // .popup::before
+
+            &.cheer::before{
+                background-position:-18.13vw 0;
+            } // .popup.cheer::before
+
+            &.wait::before{
+                background-position:0 0;
+            } // .popup.wait::before
+
+            &.preparing::before{
+                background-position:-36.9vw 0;
+            } // .popup.preparing::before
+
+            &_text{
+                font-size:3.75vw;
+                margin-top:2.08vw;
+            } // .popup_text
+
+        }
+
+    }
+    
+}
