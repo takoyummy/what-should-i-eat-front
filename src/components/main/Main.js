@@ -1,6 +1,7 @@
 import React from 'react';
 import MainContents from './MainContents.js'
 import Footer from './Footer.js'
+import MainPopup from '../common/popup/MainPopup.js';
 
 /* TO-DO :
     1. 컴포넌트화 ( 페이지 + 공통 컴포넌트 단위로 쪼개기)
@@ -16,19 +17,11 @@ const Main = () => {
     <div className="main">
         <MainContents />
         <Footer />
-        <div className="popup support">
-            <p className="popup_text">후원의 마음만 받을게요</p>
-        </div>
-        <div className="popup cheer">
-            <p className="popup_text">응원 감사합니다</p>
-        </div>
-        <div className="popup wait">
-            <p className="popup_text">업데이트 예정입니다.<br />조금만 기다려주세요.</p>
-        </div>
-        <div className="popup preparing">
-            <p className="popup_text">이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요.</p>
-        </div>
-
+        {/* 스크립트 적용시 이벤트 만들기*/}
+        <MainPopup classType="support" />
+        <MainPopup classType="cheer" />
+        <MainPopup classType="wait" />
+        <MainPopup classType="preparing" />
     </div>
     );
 };
