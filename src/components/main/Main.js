@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import MainContents from './MainContents.js';
 import Footer from './Footer.js';
 import MainPopup from '../common/popup/MainPopup.js';
@@ -17,6 +18,15 @@ import MainPopup from '../common/popup/MainPopup.js';
  * @returns
  */
 const Main = () => {
+  // 컴포넌트 마운트시 font 삽입
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.src =
+      'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap';
+    link.async = true;
+    document.body.appendChild(link);
+  });
+
   return (
     <div className="main">
       <MainContents />

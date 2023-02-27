@@ -1,15 +1,16 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const MenuButtonWide = (props) => {
-  const { text, classType, desc } = props;
+  const { text, classType, desc, linkUrl } = props;
   return (
     <li className="main_menu_list wide">
-      <a className="main_menu_list_box" href="guide.html">
+      <Link className="main_menu_list_box" to={linkUrl}>
         {text}
         <p className="text">{desc}</p>
         <div className={classType}></div>
-      </a>
+      </Link>
     </li>
   );
 };
