@@ -1,6 +1,6 @@
 import React from 'react';
-import MainContents from './MainContents.js'
-import Footer from './Footer.js'
+import MainContents from './MainContents.js';
+import Footer from './Footer.js';
 import MainPopup from '../common/popup/MainPopup.js';
 
 /* TO-DO :
@@ -11,19 +11,29 @@ import MainPopup from '../common/popup/MainPopup.js';
     3. 라우팅 작업 (react-router-dom)
     4. 백엔드 API 작업 후 CORS 해결
     5. api 완성되면 화면에 뿌려주기
-*/ 
+*/
+/**
+ * @description: 진입 페이지
+ * @returns
+ */
 const Main = () => {
-    return (
+  return (
     <div className="main">
-        <MainContents />
-        <Footer />
-        {/* 스크립트 적용시 이벤트 만들기*/}
-        <MainPopup classType="support" />
-        <MainPopup classType="cheer" />
-        <MainPopup classType="wait" />
-        <MainPopup classType="preparing" />
+      <MainContents />
+      <Footer />
+      {/* 스크립트 적용시 이벤트 만들기*/}
+      <MainPopup classType="support" text="후원의 마음만 받을게요" />
+      <MainPopup classType="cheer" text="응원 감사합니다" />
+      <MainPopup
+        classType="wait"
+        text="업데이트 예정입니다.<br/> 조금만 기다려주세요."
+      />
+      <MainPopup
+        classType="preparing"
+        text="이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요."
+      />
     </div>
-    );
+  );
 };
 
 export default Main;
