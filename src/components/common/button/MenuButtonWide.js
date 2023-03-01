@@ -2,6 +2,11 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+/**
+ * @description: 메인페이지 wide버튼
+ * @param {*} props
+ * @returns
+ */
 const MenuButtonWide = (props) => {
   const { text, classType, desc, linkUrl } = props;
   return (

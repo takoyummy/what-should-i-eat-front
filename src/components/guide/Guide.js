@@ -1,5 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
+import Arrow from '../common/button/Arrow.js';
+import WideButton from '../common/button/WideButton';
 
 const Guide = () => {
   // 컴포넌트가 처음 화면에 나타났을때 스크립트 처리
@@ -17,9 +19,7 @@ const Guide = () => {
       <h2 class="blind">이용 가이드</h2>
       <div class="contents">
         <div class="util">
-          <a href="main.html" class="icon icon_arrow">
-            이전
-          </a>
+          <Arrow linkUrl="/" desc="뒤로가기"></Arrow>
           <div class="pagebar"></div>
         </div>
         <div class="title_wrap">
@@ -57,9 +57,11 @@ const Guide = () => {
           </swiper-slide>
         </swiper-container>
       </div>
-      <a href="yesterday_menu.html" class="wide_button">
-        시작하기
-      </a>
+      <WideButton
+        className="wide_button"
+        text="시작하기"
+        linkUrl="/yesterday"
+      />
     </section>
   );
 };
