@@ -1,6 +1,5 @@
 import React from 'react';
 import Arrow from '../common/button/Arrow.js';
-import WideButton from '../common/button/WideButton.js';
 
 const yesterday = () => {
   return (
