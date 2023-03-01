@@ -14,17 +14,17 @@ const Guide = () => {
   });
 
   return (
-    <section class="contents_wrap guide">
-      <h1 class="blind">뭐먹지?</h1>
-      <h2 class="blind">이용 가이드</h2>
-      <div class="contents">
-        <div class="util">
+    <section className="contents_wrap guide">
+      <h1 className="blind">뭐먹지?</h1>
+      <h2 className="blind">이용 가이드</h2>
+      <div className="contents">
+        <div className="util">
           <Arrow linkUrl="/" desc="뒤로가기"></Arrow>
-          <div class="pagebar"></div>
+          <div className="pagebar"></div>
         </div>
-        <div class="title_wrap">
-          <p class="title_wrap_subject teacher">이용 가이드</p>
-          <p class="title_wrap_contents">
+        <div className="title_wrap">
+          <p className="title_wrap_subject teacher">이용 가이드</p>
+          <p className="title_wrap_contents">
             상암에서 근무하는 직장인을 위해 만들었어요.
             <br />
             뭐먹지의 점심 추천을 받아 보세요.
