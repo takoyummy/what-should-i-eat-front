@@ -1,5 +1,6 @@
 import React from 'react';
 import Arrow from '../common/button/Arrow.js';
+import MenuForm from '../common/form/MenuForm.js';
 
 const yesterday = () => {
   return (
@@ -17,24 +18,7 @@ const yesterday = () => {
             기억이 나지 않는다면 넘어가도 괜찮아요.
           </p>
         </div>
-        <form>
-          <div className="text_box">
-            <label className="type" for="yesterday_menu_text">
-              입력
-            </label>
-            <input
-              id="yesterday_menu_text"
-              type="text"
-              placeholder="예시) 마라탕"
-              maxlength="16"
-              required
-            />
-            <p className="text_box_focus">어제 이 메뉴를 드셨군요!</p>
-          </div>
-          <button type="submit" className="wide_button" onClick="link()">
-            입력 완료
-          </button>
-        </form>
+        <MenuForm inputId="yesterday_menu_text" bottomText="어제 이 메뉴를 드셨군요!"></MenuForm>
       </div>
     </section>
   );
