@@ -19,14 +19,14 @@ const Dislike = () => {
         </div>
         <form>
           <div class="text_box">
-            <label class="type" for="dislike_menu_text">
+            <label class="type" htmlFor="dislike_menu_text">
               입력
             </label>
             <input
               id="dislike_menu_text"
               type="text"
               placeholder="예시) 마라탕"
-              maxlength="16"
+              maxLength="16"
               required
             />
             <p class="text_box_focus">이 메뉴를 싫어하시는군요!</p>
