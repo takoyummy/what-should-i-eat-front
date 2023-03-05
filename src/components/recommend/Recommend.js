@@ -1,6 +1,7 @@
 import React from 'react';
 import testImg from '../../images/test.jpg';
 import Close from '../common/button/Close';
+import { Link } from 'react-router-dom';
 
 const Recommend = () => {
   return (
@@ -32,21 +33,21 @@ const Recommend = () => {
             </p>
             <ul className="recommend_address_share">
               <li>
-                <a
-                  href="https://naver.me/Fcagg6Mm"
+                <Link
+                  to="https://naver.me/Fcagg6Mm"
                   onclick="clip(); return false;"
                 >
                   공유하기🔗
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://naver.me/Fcagg6Mm"
+                <Link
+                  to="https://naver.me/Fcagg6Mm"
                   target="_blank"
                   title="새 창"
                 >
                   네이버지도🗺
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -58,32 +59,32 @@ const Recommend = () => {
           <p className="recommend_another_title">이 메뉴도 좋아할 거에요!</p>
           <ul className="recommend_another_wrap">
             <li className="recommend_another_box">
-              <a className="recommend_another_box_link" href="#">
+              <Link className="recommend_another_box_link" to="#">
                 <div className="recommend_another_img_box">
                   <img className="recommend_another_img" src={testImg} alt="" />
                 </div>
                 <p className="recommend_another_text">도락</p>
-              </a>
+              </Link>
             </li>
             <li className="recommend_another_box">
-              <a className="recommend_another_box_link" href="#">
+              <Link className="recommend_another_box_link" to="#">
                 <div className="recommend_another_img_box">
                   <img className="recommend_another_img" src={testImg} alt="" />
                 </div>
                 <p className="recommend_another_text">상암회관</p>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         {/* <!-- // recommend_another -->*/}
       </div>
-      <a href="main.html" className="wide_button">
+      <Link to="main.html" className="wide_button">
         너로 정했다!
-      </a>
+      </Link>
       {/* <!-- 개발 :: 메인화면으로 돌아갈 시, .preparing 팝업 띄우기  --> */}
-      <a href="loader.html" className="wide_button type1">
+      <Link to="loader.html" className="wide_button type1">
         한 번 더
-      </a>
+      </Link>
     </section>
   );
 };
