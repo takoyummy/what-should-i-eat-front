@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 
 /**
  * @description: 메인페이지 중간사이즈 버튼.
@@ -11,9 +12,9 @@ const MenuButtonMiddle = (props) => {
   return (
     <>
       <li className={classNames('main_menu_list', classType)}>
-        <a className="main_menu_list_box" onClick={onClick}>
+        <Link className="main_menu_list_box" onClick={onClick}>
           {text}
-        </a>
+        </Link>
       </li>
     </>
   );
