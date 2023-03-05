@@ -1,5 +1,6 @@
 import { React } from 'react';
 import classNames from 'classnames';
+import Parser from 'html-react-parser';
 
 /**
  * @description: 공통 팝업 컴포넌트. props로 classType 속성(support, cheer, wait, preparing)을 받는다.
@@ -16,11 +17,11 @@ const MainPopup = (props) => {
     */
 
   // classTypes
-  const { classType, text } = props;
+  const { classType, text, id } = props;
 
   return (
-    <div className={classNames('popup', classType)}>
-      <p class="popup_text">{text}</p>
+    <div className={classNames('popup', classType)} id={id}>
+      <p class="popup_text">{Parser(text)}</p>
     </div>
   );
 };

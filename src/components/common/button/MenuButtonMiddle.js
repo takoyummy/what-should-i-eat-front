@@ -7,11 +7,11 @@ import classNames from 'classnames/bind';
  * @returns
  */
 const MenuButtonMiddle = (props) => {
-  const { classType, text, linkUrl } = props;
+  const { classType, text, linkUrl, onClick } = props;
   return (
     <>
       <li className={classNames('main_menu_list', classType)}>
-        <a className="main_menu_list_box" href="#">
+        <a className="main_menu_list_box" onClick={onClick}>
           {text}
         </a>
       </li>

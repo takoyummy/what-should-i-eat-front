@@ -7,17 +7,20 @@ import Yesterday from './components/yesterday/Yesterday';
 import Dislike from './components/dislike/Dislike';
 import Loader from './components/loader/Loader';
 import Recommend from './components/recommend/Recommend';
+import { CommonProvider } from './components/common/context/CommonContext';
 
 const App = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/guide" element={<Guide />} />
-      <Route path="/yesterday" element={<Yesterday />} />
-      <Route path="/dislike" element={<Dislike />} />
-      <Route path="/loader" element={<Loader />} />
-      <Route path="/recommend" element={<Recommend />} />
-    </Routes>
+    <CommonProvider>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/guide" element={<Guide />} />
+        <Route path="/yesterday" element={<Yesterday />} />
+        <Route path="/dislike" element={<Dislike />} />
+        <Route path="/loader" element={<Loader />} />
+        <Route path="/recommend" element={<Recommend />} />
+      </Routes>
+    </CommonProvider>
   );
 };
 

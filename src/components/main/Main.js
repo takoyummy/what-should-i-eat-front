@@ -32,13 +32,19 @@ const Main = () => {
       <MainContents />
       <Footer />
       {/* 스크립트 적용시 이벤트 만들기*/}
-      <MainPopup classType="support" text="후원의 마음만 받을게요" />
-      <MainPopup classType="cheer" text="응원 감사합니다" />
       <MainPopup
+        id="pop_support"
+        classType="support"
+        text="후원의 마음만 받을게요"
+      />
+      <MainPopup id="pop_cheer" classType="cheer" text="응원 감사합니다" />
+      <MainPopup
+        id="pop_wait"
         classType="wait"
         text="업데이트 예정입니다.<br/> 조금만 기다려주세요."
       />
       <MainPopup
+        id="pop_preparing"
         classType="preparing"
         text="이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요."
       />
