@@ -8,7 +8,6 @@
     <title>뭐먹지?</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="src/dist/css/layout.css" />
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 </head>
 <body>
     <div class="main">
@@ -32,17 +31,17 @@
                             </a>
                         </li>
                         <li class="main_menu_list main_menu_restaurant">
-                            <a class="main_menu_list_box" href="#">
+                            <a class="main_menu_list_box" href="#" onclick="popupWait()">
                                 식당추천
                             </a>
                         </li>
                         <li class="main_menu_list main_menu_party">
-                            <a class="main_menu_list_box" href="#">
+                            <a class="main_menu_list_box" href="#" onclick="popupWait()">
                                 점심팟
                             </a>
                         </li>
                         <li class="main_menu_list main_menu_schedule">
-                            <a class="main_menu_list_box" href="#">
+                            <a class="main_menu_list_box" href="#" onclick="popupWait()">
                                 점심 스케줄러
                             </a>
                         </li>
@@ -52,8 +51,8 @@
         </main>
         <footer class="main_footer">
             <ul class="main_footer_top">
-                <li><a class="main_footer_top_link support" href="#">후원하기💖</a></li>
-                <li><a class="main_footer_top_link cheer" href="#">응원하기🙌</a></li>
+                <li><a class="main_footer_top_link support" href="#" onclick="popupSupport()">후원하기💖</a></li>
+                <li><a class="main_footer_top_link cheer" href="#" onclick="popupCheer()">응원하기🙌</a></li>
                 <li><a class="main_footer_top_link request" href="https://forms.gle/rg4HYCMDjXvjDJRv9" target="_blank" title="새 창">요청하기📣</a></li>
             </ul>
             <div class="main_footer_bottom">
@@ -61,42 +60,52 @@
             </div>
         </footer>
          <!-- popup -->
-        <div class="popup support">
+        <div id="pop_support" class="popup support">
             <p class="popup_text">후원의 마음만 받을게요</p>
         </div>
-        <div class="popup cheer">
+        <div id="pop_cheer" class="popup cheer">
             <p class="popup_text">응원 감사합니다</p>
         </div>
-        <div class="popup wait">
+        <div id="pop_wait" class="popup wait">
             <p class="popup_text">업데이트 예정입니다.<br />조금만 기다려주세요.</p>
         </div>
-        <div class="popup preparing">
+        <div id="pop_preparing" class="popup preparing">
             <p class="popup_text">이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요.</p>
         </div>
         <!-- // popup -->
     </div>
     <script>
-    $(document).ready(function(){
-        $('.main_menu_restaurant').click(function(){
-            $('.popup.wait').fadeIn(300).delay(1000).fadeOut(300);
-        });
-        $('.main_menu_party').click(function(){
-            $('.popup.wait').fadeIn(300).delay(1000).fadeOut(300);
-            return false;
-        });
-        $('.main_menu_schedule').click(function(){
-            $('.popup.wait').fadeIn(300).delay(1000).fadeOut(300);
-            return false;
-        });
-        $('.main_footer .support').click(function(){
-            $('.popup.support').fadeIn(300).delay(1000).fadeOut(300);
-            return false;
-        });
-        $('.main_footer .cheer').click(function(){
-            $('.popup.cheer').fadeIn(300).delay(1000).fadeOut(300);
-            return false;
-        });
-    });
+        let isPopupShown = false;
+
+        function popupWait(){
+            if (isPopupShown) return;
+            isPopupShown = true;
+            document.getElementById('pop_wait').classList.add('show');
+            setTimeout(function () {
+                document.getElementById('pop_wait').classList.remove('show');
+                isPopupShown = false;
+            }, 1300);
+        }
+
+        function popupSupport(){
+            if (isPopupShown) return;
+            isPopupShown = true;
+            document.getElementById('pop_support').classList.add('show');
+            setTimeout(function () {
+                document.getElementById('pop_support').classList.remove('show');
+                isPopupShown = false;
+            }, 1300);
+        }
+
+        function popupCheer(){
+            if (isPopupShown) return;
+            isPopupShown = true;
+            document.getElementById('pop_cheer').classList.add('show');
+            setTimeout(function () {
+                document.getElementById('pop_cheer').classList.remove('show');
+                isPopupShown = false;
+            }, 1300);
+        }
     </script>
 </body>
 </html>
