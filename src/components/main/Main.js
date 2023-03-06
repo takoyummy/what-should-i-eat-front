@@ -8,10 +8,17 @@ import MainPopup from '../common/popup/MainPopup.js';
     1. 컴포넌트화 ( 페이지 + 공통 컴포넌트 단위로 쪼개기)
         1-1. 메인에 구글 폰트 css 추가해서 import => useEffect사용해서 마운트 시점에 완료
         1-2. 공통 컴포넌트(팝업,버튼) 스타일 상속해서 쪼개기 => 진행중
-    2. jquery 변환 작업 => jquery fadeIn, fadeOut 어떻게 변환할지? 
-    3. 라우팅 작업 (react-router-dom)
-    4. 백엔드 API 작업 후 CORS 해결
-    5. api 완성되면 화면에 뿌려주기
+    2. jquery 변환 작업 => 퍼블리싱 담당분이 변환작업해주심
+    3. 라우팅 작업 (react-router-dom) => 80% 완료
+    4. 백엔드 API 작업 후 CORS 해결 => 테이블 생성 + 크롤링 + 데이터 -> api생성 이후에
+    5. api 완성되면 화면에 뿌려주기 => 백엔드 api 작업 끝나고 나서
+*/
+/*
+  1. 03 / 06 : to-do
+    1-1. footer 팝업 전역 상태값 받아서 붙이기
+    1-2. 로더.js에 function 붙이기
+    1-3. recommend.js에 공유하기 function 붙이기
+    1-4. recommend.js에 팝업 붙이고, 돌아가는 화면 붙이기
 */
 /**
  * @description: 진입 페이지
