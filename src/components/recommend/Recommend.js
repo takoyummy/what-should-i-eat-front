@@ -6,7 +6,7 @@ import CommonContext from '../common/context/CommonContext';
 
 const Recommend = () => {
   const navigate = useNavigate();
-  const { state, actions } = useContext(CommonContext);
+  const { actions } = useContext(CommonContext);
 
   const goToMain = () => {
     actions.setIsPreparing(true);

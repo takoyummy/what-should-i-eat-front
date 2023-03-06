@@ -15,11 +15,11 @@ import CommonContext from '../common/context/CommonContext';
     5. api 완성되면 화면에 뿌려주기 => 백엔드 api 작업 끝나고 나서
 */
 /*
-  1. 03 / 06 : to-do
-    1-1. footer 팝업 전역 상태값 받아서 붙이기 => 완료
-    1-2. 로더.js 수정 => 완료
-    1-3. recommend.js에 공유하기 function 붙이기 => 완료
-    1-4. recommend.js에 팝업 붙이고, 돌아가는 화면 붙이기  => 완료. api 완성되면 로더로 쓸 예정
+   03-07~03-08 night time to-do:
+   1. 페이지 간 값 넘겨주는 기능 처리
+   2. recommend 컴포넌트화
+   3. loader.js api값 받아오는 동안(가짜로 3초정도 띄우기) 화면 렌더링 처리
+   4. 상대 경로 => 절대 경로 import 개선
 */
 /**
  * @description: 진입 페이지
