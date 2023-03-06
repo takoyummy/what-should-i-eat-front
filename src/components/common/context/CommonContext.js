@@ -4,18 +4,20 @@ import { createContext, useState } from 'react';
  * @description : 컴포넌트 전역에서 쓰이는 전역값 관리하는 context
  */
 const CommonContext = createContext({
-  state: { isPopupShown: false },
+  state: { isPopupShown: false, isPreparing: false },
   actions: {
     setIsPopupShown: () => {},
+    setIsPreparing: () => {},
   },
 });
 
 const CommonProvider = ({ children }) => {
   const [isPopupShown, setIsPopupShown] = useState(false);
+  const [isPreparing, setIsPreparing] = useState(false);
 
   const value = {
-    state: { isPopupShown },
-    actions: { setIsPopupShown },
+    state: { isPopupShown, isPreparing },
+    actions: { setIsPopupShown, setIsPreparing },
   };
 
   return (

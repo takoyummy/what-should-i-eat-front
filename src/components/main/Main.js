@@ -1,8 +1,9 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useContext } from 'react';
 import MainContents from './MainContents.js';
 import Footer from './Footer.js';
 import MainPopup from '../common/popup/MainPopup.js';
+import CommonContext from '../common/context/CommonContext';
 
 /* TO-DO :
     1. 컴포넌트화 ( 페이지 + 공통 컴포넌트 단위로 쪼개기)
@@ -15,23 +16,34 @@ import MainPopup from '../common/popup/MainPopup.js';
 */
 /*
   1. 03 / 06 : to-do
-    1-1. footer 팝업 전역 상태값 받아서 붙이기
-    1-2. 로더.js에 function 붙이기
-    1-3. recommend.js에 공유하기 function 붙이기
-    1-4. recommend.js에 팝업 붙이고, 돌아가는 화면 붙이기
+    1-1. footer 팝업 전역 상태값 받아서 붙이기 => 완료
+    1-2. 로더.js 수정 => 완료
+    1-3. recommend.js에 공유하기 function 붙이기 => 완료
+    1-4. recommend.js에 팝업 붙이고, 돌아가는 화면 붙이기  => 완료. api 완성되면 로더로 쓸 예정
 */
 /**
  * @description: 진입 페이지
  * @returns
  */
 const Main = () => {
-  // 컴포넌트 마운트시 font 삽입
+  const { state, actions } = useContext(CommonContext);
+
   useEffect(() => {
+    // 컴포넌트 마운트시 font 삽입
     const link = document.createElement('link');
     link.src =
       'https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap';
     link.async = true;
     document.body.appendChild(link);
+
+    if (state.isPopupShown || !state.isPreparing) return;
+    actions.setIsPopupShown(true);
+    document.getElementById('pop_preparing').classList.add('show');
+    setTimeout(function () {
+      document.getElementById('pop_preparing').classList.remove('show');
+      actions.setIsPopupShown(false);
+      actions.setIsPreparing(false);
+    }, 1300);
   });
 
   return (

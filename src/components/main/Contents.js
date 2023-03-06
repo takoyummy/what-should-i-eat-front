@@ -19,6 +19,7 @@ const Contents = () => {
       actions.setIsPopupShown(false);
     }, 1300);
   };
+
   return (
     <div className="contents">
       <nav className="main_menu">

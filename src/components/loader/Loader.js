@@ -2,7 +2,7 @@ import React from 'react';
 
 /**
  * @description: loader
- * @todo : jquery timeout 작업 필요
+ * @todo : api 데이터 받아올때까지 로딩화면으로 쓸 예정.
  * @returns
  */
 const Loader = () => {

@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import testImg from '../../images/test.jpg';
 import Close from '../common/button/Close';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import CommonContext from '../common/context/CommonContext';
 
 const Recommend = () => {
+  const navigate = useNavigate();
+  const { state, actions } = useContext(CommonContext);
+
+  const goToMain = () => {
+    actions.setIsPreparing(true);
+    navigate('/');
+  };
+
   const clip = () => {
     let url = '';
     let textarea = document.createElement('textarea');
@@ -17,6 +26,7 @@ const Recommend = () => {
     alert('url이 복사되었습니다.');
     return false;
   };
+
   return (
     <section className="contents_wrap recommend_result">
       <h1 className="blind">뭐먹지?</h1>
@@ -88,11 +98,11 @@ const Recommend = () => {
         </div>
         {/* <!-- // recommend_another -->*/}
       </div>
-      <Link to="main.html" className="wide_button">
+      <button onClick={goToMain} className="wide_button">
         너로 정했다!
-      </Link>
+      </button>
       {/* <!-- 개발 :: 메인화면으로 돌아갈 시, .preparing 팝업 띄우기  --> */}
-      <Link to="loader.html" className="wide_button type1">
+      <Link to="/loader" className="wide_button type1">
         한 번 더
       </Link>
     </section>
