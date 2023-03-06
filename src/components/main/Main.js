@@ -38,7 +38,6 @@ const Main = () => {
     <div className="main">
       <MainContents />
       <Footer />
-      {/* 스크립트 적용시 이벤트 만들기*/}
       <MainPopup
         id="pop_support"
         classType="support"
