@@ -4,6 +4,19 @@ import Close from '../common/button/Close';
 import { Link } from 'react-router-dom';
 
 const Recommend = () => {
+  const clip = () => {
+    let url = '';
+    let textarea = document.createElement('textarea');
+    document.body.appendChild(textarea);
+    url = 'https://naver.me/Fcagg6Mm';
+    textarea.value = url;
+    textarea.select();
+    // deprecated ?
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('url이 복사되었습니다.');
+    return false;
+  };
   return (
     <section className="contents_wrap recommend_result">
       <h1 className="blind">뭐먹지?</h1>
@@ -33,10 +46,7 @@ const Recommend = () => {
             </p>
             <ul className="recommend_address_share">
               <li>
-                <Link
-                  to="https://naver.me/Fcagg6Mm"
-                  onclick="clip(); return false;"
-                >
+                <Link to="#" onClick={clip}>
                   공유하기🔗
                 </Link>
               </li>
