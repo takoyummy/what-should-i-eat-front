@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 /**
  * @description : 메뉴 관련 공통 폼
@@ -7,7 +8,18 @@ import { useState } from 'react';
  * @returns
  */
 const MenuForm = (props) => {
-  const { inputId, bottomText } = props;
+  // yesterday.js => state넘겨주고
+  // dislike.js 
+  const { inputId, bottomText, linkUrl } = props;
+
+  const navigate = useNavigate();
+  // -- start 이 부분 추후 리팩터링 하기
+  const location = useLocation();
+  let yesterdayText
+  if(linkUrl === '/recommend') {
+    yesterdayText = location.state.yesterday;
+  }
+  // --end
 
   const [inputText, setInputText] = useState('');
   const [pText, setPText] = useState('');
@@ -23,10 +35,18 @@ const MenuForm = (props) => {
     }
   };
 
-  // 여기에 api연결하고 동기 처리(async-await) 한 뒤, 페이지 컴포넌트 라우팅 처리하기
   const onSubmit = () => {
-    console.log('submit');
-  };
+    // 1. inputText에 있는 것들 id값 뽑아서 객체로 저장
+
+    // 2. state에 넘겨받은 url 던져주기
+
+    // refactoring 요함
+    if(linkUrl === '/recommend') {
+      navigate(linkUrl, {state : { yesterday: yesterdayText, dislike: inputText }});
+    } else {
+      navigate(linkUrl, {state: { yesterday : inputText }});
+    }
+  }
 
   return (
     <form onSubmit={onSubmit}>

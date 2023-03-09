@@ -1,5 +1,6 @@
 import React from 'react';
 import Arrow from '../common/button/Arrow.js';
+import MenuForm from '../common/form/MenuForm.js';
 
 const Dislike = () => {
   return (
@@ -17,7 +18,8 @@ const Dislike = () => {
             불호하는 메뉴가 없다면 넘어가도 괜찮아요.
           </p>
         </div>
-        <form>
+        <MenuForm inputId="dislike_menu_text" bottomText="이 메뉴를 싫어하시는군요!" linkUrl="/recommend"/>
+        {/* <form>
           <div class="text_box">
             <label class="type" htmlFor="dislike_menu_text">
               입력
@@ -34,7 +36,7 @@ const Dislike = () => {
           <button type="submit" class="wide_button" onClick="link()">
             입력 완료
           </button>
-        </form>
+        </form> */}
       </div>
     </section>
   );

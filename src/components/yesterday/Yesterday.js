@@ -18,7 +18,7 @@ const yesterday = () => {
             기억이 나지 않는다면 넘어가도 괜찮아요.
           </p>
         </div>
-        <MenuForm inputId="yesterday_menu_text" bottomText="어제 이 메뉴를 드셨군요!"></MenuForm>
+        <MenuForm inputId="yesterday_menu_text" bottomText="어제 이 메뉴를 드셨군요!" linkUrl="/dislike"></MenuForm>
       </div>
     </section>
   );

@@ -1,12 +1,18 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import testImg from '../../images/test.jpg';
 import Close from '../common/button/Close';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import CommonContext from '../common/context/CommonContext';
 
 const Recommend = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { actions } = useContext(CommonContext);
+  
+  useEffect(() => {
+    console.log(location.state);
+  })
+
 
   const goToMain = () => {
     actions.setIsPreparing(true);

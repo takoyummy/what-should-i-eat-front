@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
  * @returns
  */
 const MenuButtonMiddle = (props) => {
-  const { classType, text, linkUrl, onClick } = props;
+  const { classType, text, onClick } = props;
   return (
     <>
       <li className={classNames('main_menu_list', classType)}>
