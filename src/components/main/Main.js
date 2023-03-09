@@ -16,10 +16,10 @@ import CommonContext from '../common/context/CommonContext';
 */
 /*
    03-07~03-08 night time to-do:
-   1. 페이지 간 값 넘겨주는 기능 처리
-   2. recommend 컴포넌트화
-   3. loader.js api값 받아오는 동안(가짜로 3초정도 띄우기) 화면 렌더링 처리
-   4. 상대 경로 => 절대 경로 import 개선
+   1. 페이지 간 값 넘겨주는 기능 처리 => 진행완 
+   2. recommend 컴포넌트화 => 진행중
+   3. loader.js api값 받아오는 동안(가짜로 3초정도 띄우기) 화면 렌더링 처리 => 진행 완
+   4. 상대 경로 => 절대 경로 import 개선 => 진행 예정
 */
 /**
  * @description: 진입 페이지

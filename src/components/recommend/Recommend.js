@@ -1,23 +1,41 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import testImg from '../../images/test.jpg';
 import Close from '../common/button/Close';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import CommonContext from '../common/context/CommonContext';
+import Loader from '../loader/Loader';
 
 const Recommend = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { actions } = useContext(CommonContext);
+  const [ isLoading, setIsLoading ] = useState(true);
+  const [data, setData] = useState('');
   
   useEffect(() => {
     console.log(location.state);
-  })
+    // 3초정도 Loader 띄우고 => 추후 api로 교체 
+    getData();
+  });
 
+  // 이 부분 나중에 api로 바꾸기
+  function getData() {
+    setTimeout(() => {
+      setData('sample data');
+      setIsLoading(false);
+    }, 2000);
+  }
 
   const goToMain = () => {
     actions.setIsPreparing(true);
     navigate('/');
   };
+
+  const tryAgain = () => {
+    // api에서 받아왔던 값들 저장해서 제외하고 뿌려주기
+    // cookie에 저장? 
+    window.location.reload();
+  }
 
   const clip = () => {
     let url = '';
@@ -34,7 +52,9 @@ const Recommend = () => {
   };
 
   return (
-    <section className="contents_wrap recommend_result">
+    <>
+    {isLoading && <Loader/>}
+    {data && <section className="contents_wrap recommend_result">
       <h1 className="blind">뭐먹지?</h1>
       <h2 className="blind">추천 결과</h2>
       <div className="contents">
@@ -108,10 +128,12 @@ const Recommend = () => {
         너로 정했다!
       </button>
       {/* <!-- 개발 :: 메인화면으로 돌아갈 시, .preparing 팝업 띄우기  --> */}
-      <Link to="/loader" className="wide_button type1">
+      <button onClick={tryAgain} className="wide_button type1">
         한 번 더
-      </Link>
+      </button>
     </section>
+    }
+    </>
   );
 };
 
