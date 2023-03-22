@@ -1,0 +1,43 @@
+/* wide_button */
+.wide_button{
+    width:400px;
+    height:73px;
+    display:block;
+    margin:0 auto 15px auto;
+    background-color:#fea800;
+    border-radius:15px;
+    color:#fff;
+    font-size:24px;
+    font-family:$ff_nanum;
+    box-sizing:border-box;
+    text-align:center;
+    padding:19px;
+    font-weight:900;
+    line-height:35px;
+
+    &.type1{
+        background-color:#fffae1;
+        color:#fea800;
+    } // .wide_button.type1
+
+}
+
+/* icon_arrow */
+.icon_arrow{
+    display:inline-block;
+    vertical-align:middle;
+}
+
+@include mobile{
+
+    .wide_button{
+        width:83.33vw;
+        height:15.21vw;
+        padding:3.96vw;
+        margin:0 auto 3.12vw auto;
+        border-radius:3.13vw;
+        font-size:5vw;
+        line-height:7.29vw;
+    }
+
+}

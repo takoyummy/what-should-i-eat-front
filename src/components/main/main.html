@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="뭐먹지?는 직장인의 점심 계획 및 메뉴 결정을 간편하게 합니다. 점심 일정을 조율하고 메뉴를 결정하는 번거로움과 작별 인사를 하세요. 점심 스케줄을 쉽게 효율적으로 관리할 수 있도록 도와드립니다." />
+    <title>뭐먹지?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/style/layout.css" />
+</head>
+<body>
+    <div class="main">
+        <main class="main_contents">
+            <div class="main_visual">
+                <div class="title_wrap type1">
+                    <h1 class="title_wrap_subject">뭐먹지?<span class="beta">BETA</span></h1>
+                    <p class="title_wrap_desc">직장인 최대 난제 점심메뉴<br />뭐먹지로 해결하세요!</p>
+                </div>
+            </div>
+            <div class="contents">
+                <nav class="main_menu">
+                    <ul>
+                        <li class="main_menu_list wide">
+                            <a class="main_menu_list_box" href="../guide/guide.html">
+                                메뉴추천
+                                <p class="text">
+                                    <span>뭐먹지의 점심 추천을 </span><span>받아 보세요</span>
+                                </p>
+                                <div class="icon_box"></div>
+                            </a>
+                        </li>
+                        <li class="main_menu_list main_menu_restaurant">
+                            <a class="main_menu_list_box" href="#" onclick="popupWait()">
+                                식당추천
+                            </a>
+                        </li>
+                        <li class="main_menu_list main_menu_party">
+                            <a class="main_menu_list_box" href="#" onclick="popupWait()">
+                                점심팟
+                            </a>
+                        </li>
+                        <li class="main_menu_list main_menu_schedule">
+                            <a class="main_menu_list_box" href="#" onclick="popupWait()">
+                                점심 스케줄러
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </main>
+        <footer class="main_footer">
+            <ul class="main_footer_top">
+                <li><a class="main_footer_top_link support" href="#" onclick="popupSupport()">후원하기💖</a></li>
+                <li><a class="main_footer_top_link cheer" href="#" onclick="popupCheer()">응원하기🙌</a></li>
+                <li><a class="main_footer_top_link request" href="https://forms.gle/rg4HYCMDjXvjDJRv9" target="_blank" title="새 창">요청하기📣</a></li>
+            </ul>
+            <div class="main_footer_bottom">
+                <strong>뭐먹지? </strong>Copyright©뭐먹지 All rights reserved.
+            </div>
+        </footer>
+         <!-- popup -->
+        <div id="pop_support" class="popup support">
+            <p class="popup_text">후원의 마음만 받을게요</p>
+        </div>
+        <div id="pop_cheer" class="popup cheer">
+            <p class="popup_text">응원 감사합니다</p>
+        </div>
+        <div id="pop_wait" class="popup wait">
+            <p class="popup_text">업데이트 예정입니다.<br />조금만 기다려주세요.</p>
+        </div>
+        <div id="pop_preparing" class="popup preparing">
+            <p class="popup_text">이용해주셔서 감사합니다.<br />더 멋진 뭐먹지가 될게요.</p>
+        </div>
+        <!-- // popup -->
+    </div>
+    <script>
+        let isPopupShown = false;
+
+        function popupWait(){
+            if (isPopupShown) return;
+            isPopupShown = true;
+            document.getElementById('pop_wait').classList.add('show');
+            setTimeout(function () {
+                document.getElementById('pop_wait').classList.remove('show');
+                isPopupShown = false;
+            }, 1300);
+        }
+
+        function popupSupport(){
+            if (isPopupShown) return;
+            isPopupShown = true;
+            document.getElementById('pop_support').classList.add('show');
+            setTimeout(function () {
+                document.getElementById('pop_support').classList.remove('show');
+                isPopupShown = false;
+            }, 1300);
+        }
+
+        function popupCheer(){
+            if (isPopupShown) return;
+            isPopupShown = true;
+            document.getElementById('pop_cheer').classList.add('show');
+            setTimeout(function () {
+                document.getElementById('pop_cheer').classList.remove('show');
+                isPopupShown = false;
+            }, 1300);
+        }
+    </script>
+</body>
+</html>
