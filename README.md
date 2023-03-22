@@ -1,41 +1,159 @@
-# what-should-i-eat-front
+# 파일구조
 
----
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📂images
+ ┃ ┃ ┣ 📂icon
+ ┃ ┃ ┃ ┣ 📜icon_arrow.png
+ ┃ ┃ ┃ ┣ 📜icon_cancel.png
+ ┃ ┃ ┃ ┣ 📜icon_cheer.png
+ ┃ ┃ ┃ ┣ 📜icon_chef.png
+ ┃ ┃ ┃ ┣ 📜icon_defy.png
+ ┃ ┃ ┃ ┣ 📜icon_dish.png
+ ┃ ┃ ┃ ┣ 📜icon_full_smile.png
+ ┃ ┃ ┃ ┣ 📜icon_heart.png
+ ┃ ┃ ┃ ┣ 📜icon_noodle.png
+ ┃ ┃ ┃ ┣ 📜icon_paper.png
+ ┃ ┃ ┃ ┣ 📜icon_party.png
+ ┃ ┃ ┃ ┣ 📜icon_preparing.png
+ ┃ ┃ ┃ ┣ 📜icon_restaurant.png
+ ┃ ┃ ┃ ┣ 📜icon_schedule.png
+ ┃ ┃ ┃ ┣ 📜icon_soup.png
+ ┃ ┃ ┃ ┣ 📜icon_teacher.png
+ ┃ ┃ ┃ ┣ 📜icon_thinking.png
+ ┃ ┃ ┃ ┗ 📜icon_wait.png
+ ┃ ┃ ┣ 📂sprite
+ ┃ ┃ ┃ ┣ 📜sprite.css
+ ┃ ┃ ┃ ┗ 📜sprite.png
+ ┃ ┃ ┣ 📜main_visual.png
+ ┃ ┃ ┗ 📜test.jpg
+ ┃ ┗ 📂style
+ ┃ ┃ ┣ 📂scss
+ ┃ ┃ ┃ ┣ 📜layout.scss
+ ┃ ┃ ┃ ┣ 📜_button.scss
+ ┃ ┃ ┃ ┣ 📜_common.scss
+ ┃ ┃ ┃ ┣ 📜_icon.scss
+ ┃ ┃ ┃ ┣ 📜_input.scss
+ ┃ ┃ ┃ ┣ 📜_loader.scss
+ ┃ ┃ ┃ ┣ 📜_main_footer.scss
+ ┃ ┃ ┃ ┣ 📜_main_visual.scss
+ ┃ ┃ ┃ ┣ 📜_menu.scss
+ ┃ ┃ ┃ ┣ 📜_mixin.scss
+ ┃ ┃ ┃ ┣ 📜_pagebar.scss
+ ┃ ┃ ┃ ┣ 📜_popup.scss
+ ┃ ┃ ┃ ┣ 📜_recommend.scss
+ ┃ ┃ ┃ ┣ 📜_reset.scss
+ ┃ ┃ ┃ ┣ 📜_slider.scss
+ ┃ ┃ ┃ ┣ 📜_title.scss
+ ┃ ┃ ┃ ┗ 📜_variables.scss
+ ┃ ┃ ┣ 📜App.css
+ ┃ ┃ ┣ 📜index.css
+ ┃ ┃ ┣ 📜layout.css
+ ┃ ┃ ┗ 📜layout.css.map
+ ┣ 📂components
+ ┃ ┣ 📂common
+ ┃ ┃ ┣ 📂button
+ ┃ ┃ ┃ ┣ 📜Arrow.js
+ ┃ ┃ ┃ ┣ 📜Close.js
+ ┃ ┃ ┃ ┣ 📜MenuButtonMiddle.js
+ ┃ ┃ ┃ ┣ 📜MenuButtonWide.js
+ ┃ ┃ ┃ ┗ 📜WideButton.js
+ ┃ ┃ ┣ 📂context
+ ┃ ┃ ┃ ┗ 📜CommonContext.js
+ ┃ ┃ ┣ 📂form
+ ┃ ┃ ┃ ┗ 📜MenuForm.js
+ ┃ ┃ ┣ 📂popup
+ ┃ ┃ ┃ ┗ 📜MainPopup.js
+ ┃ ┃ ┗ 📜ui.html
+ ┃ ┣ 📂dislike
+ ┃ ┃ ┣ 📜Dislike.js
+ ┃ ┃ ┗ 📜dislike_menu.html
+ ┃ ┣ 📂guide
+ ┃ ┃ ┣ 📜guide.html
+ ┃ ┃ ┗ 📜Guide.js
+ ┃ ┣ 📂loader
+ ┃ ┃ ┣ 📜loader.html
+ ┃ ┃ ┗ 📜Loader.js
+ ┃ ┣ 📂main
+ ┃ ┃ ┣ 📜Contents.js
+ ┃ ┃ ┣ 📜Footer.js
+ ┃ ┃ ┣ 📜main.html
+ ┃ ┃ ┣ 📜Main.js
+ ┃ ┃ ┣ 📜MainContents.js
+ ┃ ┃ ┗ 📜MainVisual.js
+ ┃ ┣ 📂recommend
+ ┃ ┃ ┣ 📜recommand.html
+ ┃ ┃ ┗ 📜Recommend.js
+ ┃ ┗ 📂yesterday
+ ┃ ┃ ┣ 📜Yesterday.js
+ ┃ ┃ ┗ 📜yesterday_menu.html
+ ┣ 📜App.js
+ ┣ 📜App.test.js
+ ┣ 📜index.js
+ ┣ 📜logo.svg
+ ┣ 📜reportWebVitals.js
+ ┣ 📜setUpProxy.js
+ ┗ 📜setupTests.js
 
-### :cake: 뭐먹지(What Shoud I eat?)
 
----
+# 일반적인 폴더 구조 (다른 vue 프로젝트를 참고하였습니다.)
+📦src // 프론트엔드 폴더
+ ┣ 📂app
+ ┃ ┣ 📂components // 개발 폴더
+ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┣ 📂layout
+ ┃ ┃ ┃ ┃ ┣ 📜popup.vue
+ ┃ ┃ ┃ ┃ ┣ 📜main.vue
+ ┃ ┃ ┃ ┣ 📂gnb
+ ┃ ┃ ┃ ┃ ┣ 📜topMenu.vue
+ ┃ ┃ ┃ ┃ ┗ 📜breadcrumbs.vue
+ ┃ ┃ ┃ ┣ 📂navbar
+ ┃ ┃ ┃ ┃ ┗ 📜nav.vue
+ ┃ ┃ ┃ ┗ 📂views
+ ┃ ┃ ┃ ┃ ┣ 📜product01.vue
+ ┃ ┃ ┃ ┃ ┣ 📜product02.vue
+ ┃ ┃ ┣ 📂page01
+ ┃ ┃ ┃ ┣ 📜page01.vue
+ ┃ ┃ ┣ 📂page02
+ ┃ ┃ ┃ ┣ 📜page02.vue
+ ┃ ┣ 📂components_pub // 퍼블리싱 폴더
+ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┣ 📂layout
+ ┃ ┃ ┃ ┃ ┣ 📜popup.vue
+ ┃ ┃ ┃ ┃ ┣ 📜main.vue
+ ┃ ┃ ┃ ┣ 📂gnb
+ ┃ ┃ ┃ ┃ ┣ 📜topMenu.vue
+ ┃ ┃ ┃ ┃ ┗ 📜breadcrumbs.vue
+ ┃ ┃ ┃ ┣ 📂navbar
+ ┃ ┃ ┃ ┃ ┗ 📜nav.vue
+ ┃ ┃ ┃ ┗ 📂views
+ ┃ ┃ ┃ ┃ ┣ 📜product01.vue
+ ┃ ┃ ┃ ┃ ┣ 📜product02.vue
+ ┃ ┃ ┣ 📂page01
+ ┃ ┃ ┃ ┣ 📜page01.vue
+ ┃ ┃ ┣ 📂page02
+ ┃ ┃ ┃ ┣ 📜page02.vue
+ ┃ ┣ 📜App.vue
+ ┃ ┣ 📜main.js
+ ┣ 📂assets
+ ┃ ┣ 📂font
+ ┃ ┃ ┣ 📜NanumGothic.eot
+ ┃ ┃ ┣ 📜NanumGothic.ttf
+ ┃ ┃ ┣ 📜NanumGothic.woff
+ ┃ ┣ 📂images
+ ┃ ┃ ┣ 📜icon.png
+ ┃ ┃ ┣ 📜bg_01.jpg
+ ┃ ┃ ┣ 📜btn.png
+ ┃ ┗ 📂style
+ ┃ ┃ ┣ 📜style_common.css
+ ┃ ┃ ┣ 📜style.scss
+ ┣ 📂error
+ ┃ ┣ 📜404.html
+ ┃ ┣ 📜500.html
+ ┣ 📜favicon.ico
+ ┗ 📜index.html
 
-- 상암동에서 거주하는 교보 아이들:family:의 점심 식사를 해결하기 위한 프로젝트
-- 직장인의 가장 큰 고민인 "오늘 점심에 뭐 먹지" :neutral_face: (식당,메뉴 설정)
-- 오늘 점심은 누구와 먹지? (점심 파트너 모집, 점약 일정 관리)
 
-### :memo: Intro
 
----
-
-- 개발 인원 : 기획 1명, 디자인 1명, 퍼블리셔 2명, 개발자 3명
-- 프로젝트 기간 : 2022-11-17 ~
-- 개발 환경 : React, SpringBoot 2.4.5, JDK 11, Spring JPA, Junit5
-- 배포 환경 : Gradle, Jenkins, Docker, Centos7 [On-premise 예정]
-- 웹서버 : Ngnix, Tomcat 9.0
-- 데이터베이스: MySQL
-- 협업도구: Git, Notion, Slack, Figma
-
-### :octocat: Related Project
-
----
-
-[Backend Repo](https://github.com/Geunho-Hong/what-should-i-eat)
-
-### :raising_hand: 참여자
-
----
-
-- Product Manger [유요한]
-- Designer [김혜진]
-- Publisher [진주은]
-- Publisher [김민지]
-- Developer [홍근호]
-- Developer [안세아]
-- Developer [윤해서]
+* 일반적인 폴더 구조를 참고하여 우리 프로젝트 폴더 구조를 짜봤습니다. 
+경로는 검색에 걸려든건 최대한 다 바꾸고 테스트도 했는데, 혹시 제가 놓친게 있을 수 있으니 세아님께서 다시 한번 확 인 부탁드립니다!
