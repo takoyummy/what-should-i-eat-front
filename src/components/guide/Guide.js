@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Arrow from '../common/button/Arrow.js';
-import WideButton from '../common/button/WideButton';
+import Arrow from 'components/common/button/Arrow.js';
+import WideButton from 'components/common/button/WideButton';
 
 const Guide = () => {
   // 컴포넌트가 처음 화면에 나타났을때 스크립트 처리

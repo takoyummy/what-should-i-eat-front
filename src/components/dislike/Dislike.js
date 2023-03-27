@@ -1,6 +1,6 @@
 import React from 'react';
-import Arrow from '../common/button/Arrow.js';
-import MenuForm from '../common/form/MenuForm.js';
+import Arrow from 'components/common/button/Arrow.js';
+import MenuForm from 'components/common/form/MenuForm.js';
 
 const Dislike = () => {
   return (

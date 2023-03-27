@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './dist/css/layout.css';
-import Main from './components/main/Main';
-import Guide from './components/guide/Guide';
-import Yesterday from './components/yesterday/Yesterday';
-import Dislike from './components/dislike/Dislike';
-import Loader from './components/loader/Loader';
-import Recommend from './components/recommend/Recommend';
-import { CommonProvider } from './components/common/context/CommonContext';
+import 'assets/style/layout.css';
+import Main from 'components/main/Main';
+import Guide from 'components/guide/Guide';
+import Yesterday from 'components/yesterday/Yesterday';
+import Dislike from 'components/dislike/Dislike';
+import Loader from 'components/loader/Loader';
+import Recommend from 'components/recommend/Recommend';
+import { CommonProvider } from 'components/common/context/CommonContext';
 
 const App = () => {
   return (

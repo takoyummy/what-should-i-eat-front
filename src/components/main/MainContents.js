@@ -1,6 +1,6 @@
 import React from 'react';
-import Contents from './Contents';
-import MainVisual from './MainVisual';
+import Contents from 'components/main/Contents';
+import MainVisual from 'components/main/MainVisual';
 
 /**
  * @description: 메인 중앙 페이지

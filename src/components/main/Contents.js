@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import MenuButtonMiddle from '../common/button/MenuButtonMiddle';
-import MenuButtonWide from '../common/button/MenuButtonWide';
-import CommonContext from '../common/context/CommonContext';
+import MenuButtonMiddle from 'components/common/button/MenuButtonMiddle';
+import MenuButtonWide from 'components/common/button/MenuButtonWide';
+import CommonContext from 'components/common/context/CommonContext';
 
 /**
  * @description: 중앙 컨텐츠 영역

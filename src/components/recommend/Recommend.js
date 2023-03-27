@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
-import testImg from '../../images/test.jpg';
-import Close from '../common/button/Close';
+import testImg from 'assets/images/test.jpg';
+import Close from 'components/common/button/Close';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import CommonContext from '../common/context/CommonContext';
-import Loader from '../loader/Loader';
+import CommonContext from 'components/common/context/CommonContext';
+import Loader from 'components/loader/Loader';
 
 const Recommend = () => {
   const navigate = useNavigate();

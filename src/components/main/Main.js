@@ -1,9 +1,9 @@
 import React from 'react';
 import { useEffect, useContext } from 'react';
-import MainContents from './MainContents.js';
-import Footer from './Footer.js';
-import MainPopup from '../common/popup/MainPopup.js';
-import CommonContext from '../common/context/CommonContext';
+import MainContents from 'components/main/MainContents.js';
+import Footer from 'components/main/Footer.js';
+import MainPopup from 'components/common/popup/MainPopup.js';
+import CommonContext from 'components/common/context/CommonContext';
 
 /* TO-DO :
     1. 컴포넌트화 ( 페이지 + 공통 컴포넌트 단위로 쪼개기)

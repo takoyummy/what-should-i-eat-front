@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import CommonContext from '../common/context/CommonContext';
+import CommonContext from 'components/common/context/CommonContext';
 
 const Footer = () => {
   const { state, actions } = useContext(CommonContext);
