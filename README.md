@@ -36,6 +36,8 @@
 - Designer [김혜진]
 - Publisher [진주은]
 - Publisher [김민지]
+- Publisher [김유정]
 - Developer [홍근호]
 - Developer [안세아]
 - Developer [윤해서]
+
