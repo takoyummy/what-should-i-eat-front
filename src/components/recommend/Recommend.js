@@ -4,26 +4,60 @@ import Close from 'components/common/button/Close';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import CommonContext from 'components/common/context/CommonContext';
 import Loader from 'components/loader/Loader';
+import axios from 'axios';
 
 const Recommend = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { actions } = useContext(CommonContext);
   const [ isLoading, setIsLoading ] = useState(true);
-  const [data, setData] = useState('');
-  
-  useEffect(() => {
-    console.log(location.state);
-    // 3초정도 Loader 띄우고 => 추후 api로 교체 
-    getData();
-  });
+  const [ dataList, setDataList ] = useState([]);
 
-  // 이 부분 나중에 api로 바꾸기
-  function getData() {
-    setTimeout(() => {
-      setData('sample data');
-      setIsLoading(false);
-    }, 2000);
+  useEffect(() => {
+    // 3초정도 Loader 띄우고 => 추후 api로 교체 
+    // 일단 랜덤으로..ㅠㅠ
+    const foods = ["분식", "양식", "일식", "중식", "멕시코", "파스타", "김밥", "떡볶이", "피자", "한식", "비빔밥", "우육탕면", "짜장면", "돈까스", "가츠동", "사케동", "덮밥" ];
+    const num = randomNum(0, foods.length - 1);
+    const param = {
+      first : foods[num],
+      second: foods[(num + 1) % foods.length],
+      third : foods[(num + 2) % foods.length]
+    }
+    getData(param);
+  }, []);
+
+  function randomNum(min, max){
+    var randNum = Math.floor(Math.random()*(max-min+1)) + min;
+    return randNum;
+} 
+
+  // api 3개 리스트로 수정해달라고 요청하기..ㅋㅋㅋㅋㅋㅋㅋ ㅠㅋㅋ
+  function getData(param) {
+    axios
+      .all([axios.post('http://119.70.42.35:9290/location', {
+        location : param.first,
+        dislike : location.state?.dislike,
+        yesterday : location.state?.yesterday
+      }), axios.post('http://119.70.42.35:9290/location', {
+        location : param.second,
+        dislike : location.state?.dislike,
+        yesterday : location.state?.yesterday
+      }),
+      axios.post('http://119.70.42.35:9290/location', {
+        location : param.third,
+        dislike : location.state?.dislike,
+        yesterday : location.state?.yesterday
+      })])
+      .then(axios.spread((res1, res2, res3) => {
+        const list = [];
+        list.push(res1.data.data);
+        list.push(res2.data.data);
+        list.push(res3.data.data);
+        setDataList(list);
+        setIsLoading(false);
+      })
+      )
+      .catch((err) => console.log(err));
   }
 
   const goToMain = () => {
@@ -41,7 +75,7 @@ const Recommend = () => {
     let url = '';
     let textarea = document.createElement('textarea');
     document.body.appendChild(textarea);
-    url = 'https://naver.me/Fcagg6Mm';
+    url = dataList[0].link;
     textarea.value = url;
     textarea.select();
     // deprecated ?
@@ -54,7 +88,7 @@ const Recommend = () => {
   return (
     <>
     {isLoading && <Loader/>}
-    {data && <section className="contents_wrap recommend_result">
+    {!isLoading && <section className="contents_wrap recommend_result">
       <h1 className="blind">뭐먹지?</h1>
       <h2 className="blind">추천 결과</h2>
       <div className="contents">
@@ -72,12 +106,12 @@ const Recommend = () => {
           <div className="recommend_box">
             <img className="recommend_img" src={testImg} alt="" />
           </div>
-          <p className="recommend_title">개미집 상암점</p>
+          <p className="recommend_title">{dataList[0].title}</p>
           <div className="recommend_address">
             <p className="recommend_address_title">상세주소</p>
             <p className="recommend_address_text">
               <strong>
-                서울 마포구 월드컵북로 396 누리꿈스퀘어 공동제작센터 2층
+              {dataList[0].roadAddress}
               </strong>
             </p>
             <ul className="recommend_address_share">
@@ -105,19 +139,19 @@ const Recommend = () => {
           <p className="recommend_another_title">이 메뉴도 좋아할 거에요!</p>
           <ul className="recommend_another_wrap">
             <li className="recommend_another_box">
-              <Link className="recommend_another_box_link" to="#">
+              <Link className="recommend_another_box_link" to={dataList[1].link}>
                 <div className="recommend_another_img_box">
                   <img className="recommend_another_img" src={testImg} alt="" />
                 </div>
-                <p className="recommend_another_text">도락</p>
+                <p className="recommend_another_text">{dataList[1].title}</p>
               </Link>
             </li>
             <li className="recommend_another_box">
-              <Link className="recommend_another_box_link" to="#">
+              <Link className="recommend_another_box_link" to={dataList[2].link}>
                 <div className="recommend_another_img_box">
                   <img className="recommend_another_img" src={testImg} alt="" />
                 </div>
-                <p className="recommend_another_text">상암회관</p>
+                <p className="recommend_another_text">{dataList[2].title}</p>
               </Link>
             </li>
           </ul>
