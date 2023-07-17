@@ -1,8 +1,13 @@
 {
-    "routes": [
+    "rewrites": [
       {
-        "src": "/api/(.*)",
-        "dest": "http://119.70.42.35:9290"
+        "source": "/api/:path*",
+        "destination": "http://119.70.42.35:9290/:path*"
+      },
+      {
+        "source": "/api/:path*/",
+        "destination": "http://119.70.42.35:9290/:path*/"
       }
     ]
-}
+  }
+  
