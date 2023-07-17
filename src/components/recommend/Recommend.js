@@ -34,16 +34,16 @@ const Recommend = () => {
   // api 3개 리스트로 수정해달라고 요청하기..ㅋㅋㅋㅋㅋㅋㅋ ㅠㅋㅋ
   function getData(param) {
     axios
-      .all([axios.post('http://119.70.42.35:9290/location', {
+      .all([axios.post('/api/location', {
         location : param.first,
         dislike : location.state?.dislike,
         yesterday : location.state?.yesterday
-      }), axios.post('http://119.70.42.35:9290/location', {
+      }), axios.post('/api/location', {
         location : param.second,
         dislike : location.state?.dislike,
         yesterday : location.state?.yesterday
       }),
-      axios.post('http://119.70.42.35:9290/location', {
+      axios.post('/api/location', {
         location : param.third,
         dislike : location.state?.dislike,
         yesterday : location.state?.yesterday

@@ -5,7 +5,10 @@ module.exports = function(app) {
     '/api',
     createProxyMiddleware({
       target: 'http://119.70.42.35:9290',
-      changeOrigin: true
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': '',
+      },
     })
   );
 };
