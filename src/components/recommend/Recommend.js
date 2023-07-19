@@ -35,16 +35,13 @@ const Recommend = () => {
   function getData(param) {
     axios
       .all([axios.post('/api/location', {
-        location : param.first,
         dislike : location.state?.dislike,
         yesterday : location.state?.yesterday
       }), axios.post('/api/location', {
-        location : param.second,
         dislike : location.state?.dislike,
         yesterday : location.state?.yesterday
       }),
       axios.post('/api/location', {
-        location : param.third,
         dislike : location.state?.dislike,
         yesterday : location.state?.yesterday
       })])
