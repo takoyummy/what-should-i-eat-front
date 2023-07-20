@@ -9,14 +9,14 @@ import { useNavigate, useLocation } from 'react-router-dom';
  */
 const MenuForm = (props) => {
   // yesterday.js => state넘겨주고
-  // dislike.js 
+  // dislike.js
   const { inputId, bottomText, linkUrl } = props;
 
   const navigate = useNavigate();
   // -- start 이 부분 추후 리팩터링 하기
   const location = useLocation();
-  let yesterdayText
-  if(linkUrl === '/recommend') {
+  let yesterdayText;
+  if (linkUrl === '/recommend') {
     yesterdayText = location.state.yesterday;
   }
   // --end
@@ -41,12 +41,14 @@ const MenuForm = (props) => {
     // 2. state에 넘겨받은 url 던져주기
 
     // refactoring 요함
-    if(linkUrl === '/recommend') {
-      navigate(linkUrl, {state : { yesterday: yesterdayText, dislike: inputText }});
+    if (linkUrl === '/recommend') {
+      navigate(linkUrl, {
+        state: { yesterday: yesterdayText, dislike: inputText },
+      });
     } else {
-      navigate(linkUrl, {state: { yesterday : inputText }});
+      navigate(linkUrl, { state: { yesterday: inputText } });
     }
-  }
+  };
 
   return (
     <form onSubmit={onSubmit}>
@@ -61,7 +63,6 @@ const MenuForm = (props) => {
           maxLength="16"
           value={inputText}
           onChange={onChange}
-          required
         />
         <p className="text_box_focus">{pText}</p>
       </div>
