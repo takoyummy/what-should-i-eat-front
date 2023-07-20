@@ -1364,7 +1364,6 @@ html, body {
 
 @media (max-width: 480px) {
   .main .popup {
-    left: calc(50% - 33.33vw);
     width: 66.67vw;
     min-height: 38.75vw;
     padding: 6.46vw 12.5vw 6.67vw;
