@@ -287,7 +287,7 @@ input:disabled {
   width: 380px;
   height: 34px;
   font-size: 24px;
-  border-bottom: solid 2px #fea800;
+  border: none;
 }
 .text_box input[type=text]::-webkit-input-placeholder {
   color: #d9d9d9;
@@ -310,11 +310,21 @@ input:disabled {
   font-family: "Noto Sans KR", "sans-serif";
 }
 .text_box_focus {
+  position: relative;
   display: block;
   color: #fea800;
   font-size: 14px;
-  margin-top: 9.6px;
+  padding-top: 9.6px;
   font-weight: 600;
+}
+.text_box_focus::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 380px;
+  height: 2px;
+  background-color: #fea800;
 }
 
 .contents_wrap.dislike_menu .text_box, .contents_wrap.yesterday_menu .text_box {
@@ -331,11 +341,14 @@ input:disabled {
     width: 79.17vw;
     height: 7.08vw;
     font-size: 5vw;
-    border-bottom: solid 0.42vw #fea800;
   }
   .text_box_focus {
     font-size: 2.8vw;
-    margin-top: 2vw;
+    padding-top: 2vw;
+  }
+  .text_box_focus::before{
+    width: 79.1vw;
+    height: 0.4vw;
   }
   .contents_wrap.dislike_menu .text_box, .contents_wrap.yesterday_menu .text_box {
     height: calc(100vh - 84.79vw);
@@ -951,6 +964,7 @@ input:disabled {
 @media (max-width: 480px) {
   .recommend {
     margin: 6.46vw 0 0 11.25vw;
+    width: 81vw;
   }
   .recommend_box {
     height: 52.5vw;
