@@ -29,7 +29,6 @@ const Dislike = () => {
               type="text"
               placeholder="예시) 마라탕"
               maxLength="16"
-              required
             />
             <p class="text_box_focus">이 메뉴를 싫어하시는군요!</p>
           </div>
