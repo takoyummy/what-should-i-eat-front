@@ -7,6 +7,7 @@ import Yesterday from 'components/yesterday/Yesterday';
 import Dislike from 'components/dislike/Dislike';
 import Loader from 'components/loader/Loader';
 import Recommend from 'components/recommend/Recommend';
+import Map from 'components/map/Map';
 import { CommonProvider } from 'components/common/context/CommonContext';
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/dislike" element={<Dislike />} />
         <Route path="/loader" element={<Loader />} />
         <Route path="/recommend" element={<Recommend />} />
+        <Route path="/map" element={<Map />} />
       </Routes>
     </CommonProvider>
   );

@@ -142,8 +142,14 @@ const Recommend = () => {
                   </li>
                   <li>
                     <Link
-                      to="https://naver.me/Fcagg6Mm"
-                      target="_blank"
+                      to={`/map`}
+                      state={{
+                        title: dataList[0].title.replace(/<[^>]*>?/g, ''),
+                        mapx: dataList[0].mapx,
+                        mapy: dataList[0].mapy,
+                        dislike: location.state?.dislike,
+                        yesterday: location.state?.yesterday,
+                      }}
                       title="새 창"
                     >
                       네이버지도🗺
