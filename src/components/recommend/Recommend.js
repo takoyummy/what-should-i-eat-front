@@ -124,7 +124,7 @@ const Recommend = () => {
             {/* recommend :: 개발 :: 이미지, 상호명, 주소명, 링크 주소 */}
             <div className="recommend">
               <div className="recommend_box">
-                <img className="recommend_img" src={testImg} alt="" />
+                <img className="recommend_img" src={dataList[0].imgUrl} alt="" />
               </div>
               <p className="recommend_title">
                 {dataList[0].title.replace(/<[^>]*>?/g, '')}
@@ -174,7 +174,7 @@ const Recommend = () => {
                     <div className="recommend_another_img_box">
                       <img
                         className="recommend_another_img"
-                        src={testImg}
+                        src={dataList[1].imgUrl}
                         alt=""
                       />
                     </div>
@@ -191,7 +191,7 @@ const Recommend = () => {
                     <div className="recommend_another_img_box">
                       <img
                         className="recommend_another_img"
-                        src={testImg}
+                        src={dataList[2].imgUrl}
                         alt=""
                       />
                     </div>
