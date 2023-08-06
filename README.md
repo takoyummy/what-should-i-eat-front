@@ -26,7 +26,7 @@
 
 ---
 
-[Backend Repo](https://github.com/Geunho-Hong/what-should-i-eat)
+[Backend Repo](https://github.com/immsee098/wteBE)
 
 ### :raising_hand: 참여자
 
