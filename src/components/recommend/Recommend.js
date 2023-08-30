@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import testImg from 'assets/images/test.jpg';
+import sampleImg from 'assets/images/salad.jpg';
 import Close from 'components/common/button/Close';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import CommonContext from 'components/common/context/CommonContext';
@@ -104,6 +104,10 @@ const Recommend = () => {
     return false;
   };
 
+  const handleImgError = (e) => {
+    e.target.src = sampleImg;
+  }
+
   return (
     <>
       {isLoading && <Loader />}
@@ -124,7 +128,7 @@ const Recommend = () => {
             {/* recommend :: 개발 :: 이미지, 상호명, 주소명, 링크 주소 */}
             <div className="recommend">
               <div className="recommend_box">
-                <img className="recommend_img" src={dataList[0].imgUrl} alt="" />
+                <img className="recommend_img" src={dataList[0].imgUrl ?? sampleImg} onError={handleImgError} alt="" />
               </div>
               <p className="recommend_title">
                 {dataList[0].title.replace(/<[^>]*>?/g, '')}
@@ -174,7 +178,8 @@ const Recommend = () => {
                     <div className="recommend_another_img_box">
                       <img
                         className="recommend_another_img"
-                        src={dataList[1].imgUrl}
+                        src={dataList[1].imgUrl ?? sampleImg}
+                        onError={handleImgError}
                         alt=""
                       />
                     </div>
@@ -191,7 +196,8 @@ const Recommend = () => {
                     <div className="recommend_another_img_box">
                       <img
                         className="recommend_another_img"
-                        src={dataList[2].imgUrl}
+                        src={dataList[2].imgUrl ?? sampleImg}
+                        onError={handleImgError}
                         alt=""
                       />
                     </div>
