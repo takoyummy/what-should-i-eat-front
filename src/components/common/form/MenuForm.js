@@ -20,6 +20,8 @@ const MenuForm = (props) => {
     yesterdayText = location.state.yesterday;
   }
   // --end
+  const defaultYesterday = "마라탕";
+  const defaultDislike = "떡볶이";
 
   const [inputText, setInputText] = useState('');
   const [pText, setPText] = useState('');
@@ -36,17 +38,12 @@ const MenuForm = (props) => {
   };
 
   const onSubmit = () => {
-    // 1. inputText에 있는 것들 id값 뽑아서 객체로 저장
-
-    // 2. state에 넘겨받은 url 던져주기
-
-    // refactoring 요함
     if (linkUrl === '/recommend') {
       navigate(linkUrl, {
-        state: { yesterday: yesterdayText, dislike: inputText },
+        state: { yesterday: yesterdayText, dislike: inputText.length === 0 ? defaultDislike : inputText },
       });
     } else {
-      navigate(linkUrl, { state: { yesterday: inputText } });
+      navigate(linkUrl, { state: { yesterday: inputText.length === 0 ? defaultYesterday : inputText } });
     }
   };
 
