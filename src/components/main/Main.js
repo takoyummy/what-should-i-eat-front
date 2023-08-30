@@ -5,22 +5,6 @@ import Footer from 'components/main/Footer.js';
 import MainPopup from 'components/common/popup/MainPopup.js';
 import CommonContext from 'components/common/context/CommonContext';
 
-/* TO-DO :
-    1. 컴포넌트화 ( 페이지 + 공통 컴포넌트 단위로 쪼개기)
-        1-1. 메인에 구글 폰트 css 추가해서 import => useEffect사용해서 마운트 시점에 완료
-        1-2. 공통 컴포넌트(팝업,버튼) 스타일 상속해서 쪼개기 => 진행중
-    2. jquery 변환 작업 => 퍼블리싱 담당분이 변환작업해주심
-    3. 라우팅 작업 (react-router-dom) => 80% 완료
-    4. 백엔드 API 작업 후 CORS 해결 => 테이블 생성 + 크롤링 + 데이터 -> api생성 이후에
-    5. api 완성되면 화면에 뿌려주기 => 백엔드 api 작업 끝나고 나서
-*/
-/*
-   03-07~03-08 night time to-do:
-   1. 페이지 간 값 넘겨주는 기능 처리 => 진행완 
-   2. recommend 컴포넌트화 => 진행중
-   3. loader.js api값 받아오는 동안(가짜로 3초정도 띄우기) 화면 렌더링 처리 => 진행 완
-   4. 상대 경로 => 절대 경로 import 개선 => 진행 예정
-*/
 /**
  * @description: 진입 페이지
  * @returns
